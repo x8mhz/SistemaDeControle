@@ -130,7 +130,7 @@
             this.btn_Novo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Novo.Location = new System.Drawing.Point(24, 12);
             this.btn_Novo.Name = "btn_Novo";
-            this.btn_Novo.Size = new System.Drawing.Size(80, 90);
+            this.btn_Novo.Size = new System.Drawing.Size(80, 96);
             this.btn_Novo.TabIndex = 0;
             this.btn_Novo.Text = "Novo";
             this.btn_Novo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -148,7 +148,7 @@
             this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Salvar.Location = new System.Drawing.Point(132, 12);
             this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(80, 90);
+            this.btn_Salvar.Size = new System.Drawing.Size(80, 96);
             this.btn_Salvar.TabIndex = 1;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -166,7 +166,7 @@
             this.btn_Excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Excluir.Location = new System.Drawing.Point(241, 12);
             this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(80, 90);
+            this.btn_Excluir.Size = new System.Drawing.Size(80, 96);
             this.btn_Excluir.TabIndex = 2;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -184,7 +184,7 @@
             this.btn_Sair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Sair.Location = new System.Drawing.Point(351, 12);
             this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(80, 90);
+            this.btn_Sair.Size = new System.Drawing.Size(80, 96);
             this.btn_Sair.TabIndex = 3;
             this.btn_Sair.Text = "Sair";
             this.btn_Sair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -478,7 +478,7 @@
             this.btn_Pesquisar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Pesquisar.Location = new System.Drawing.Point(863, 12);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
-            this.btn_Pesquisar.Size = new System.Drawing.Size(91, 90);
+            this.btn_Pesquisar.Size = new System.Drawing.Size(91, 96);
             this.btn_Pesquisar.TabIndex = 5;
             this.btn_Pesquisar.Text = "Pesquisar";
             this.btn_Pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -494,9 +494,9 @@
             this.btn_Email.ForeColor = System.Drawing.Color.Gray;
             this.btn_Email.Image = ((System.Drawing.Image)(resources.GetObject("btn_Email.Image")));
             this.btn_Email.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Email.Location = new System.Drawing.Point(1164, 12);
+            this.btn_Email.Location = new System.Drawing.Point(1164, 27);
             this.btn_Email.Name = "btn_Email";
-            this.btn_Email.Size = new System.Drawing.Size(80, 90);
+            this.btn_Email.Size = new System.Drawing.Size(80, 84);
             this.btn_Email.TabIndex = 6;
             this.btn_Email.Text = "E-Mail";
             this.btn_Email.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
