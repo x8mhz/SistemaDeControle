@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classe Banco de Dados\c_Conexao.cs" />
+    <Compile Include="Classe Banco de Dados\c_EnviarClienteBanco.cs" />
+    <Compile Include="Classe Banco de Dados\c_EnviarEntradaBanco.cs" />
+    <Compile Include="Classe de Validações\c_ValidarPesquisa.cs" />
+    <Compile Include="Classes de Atributos\c_Cliente.cs" />
+    <Compile Include="Classes de Atributos\c_Entrada.cs" />
+    <Compile Include="Classes de Atributos\c_Produto.cs" />
+    <Compile Include="Classe de Validações\c_ValidarEntrada.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
