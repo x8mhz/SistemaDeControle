@@ -29,79 +29,145 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f_CadastroCliente));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.pn_MenuCadastroCliente = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_NomeCliente = new System.Windows.Forms.TextBox();
-            this.txt_EnderecoCliente = new System.Windows.Forms.TextBox();
-            this.txt_TelefoneCliente = new System.Windows.Forms.MaskedTextBox();
+            this.btn_SalvarCliente = new System.Windows.Forms.Button();
+            this.pn_CadastroCliente = new System.Windows.Forms.Panel();
             this.txt_CelularCliente = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txt_TelefoneCliente = new System.Windows.Forms.MaskedTextBox();
+            this.txt_EnderecoCliente = new System.Windows.Forms.TextBox();
+            this.txt_NomeCliente = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pn_MenuCadastroCliente.SuspendLayout();
+            this.pn_CadastroCliente.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pn_MenuCadastroCliente
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btn_Salvar);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 111);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txt_CelularCliente);
-            this.panel2.Controls.Add(this.txt_TelefoneCliente);
-            this.panel2.Controls.Add(this.txt_EnderecoCliente);
-            this.panel2.Controls.Add(this.txt_NomeCliente);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(-1, 117);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(672, 273);
-            this.panel2.TabIndex = 1;
-            // 
-            // btn_Salvar
-            // 
-            this.btn_Salvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_Salvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salvar.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.ForeColor = System.Drawing.Color.Gray;
-            this.btn_Salvar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Salvar.Image")));
-            this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Salvar.Location = new System.Drawing.Point(541, 12);
-            this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(80, 96);
-            this.btn_Salvar.TabIndex = 2;
-            this.btn_Salvar.Text = "Salvar";
-            this.btn_Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.pn_MenuCadastroCliente.BackColor = System.Drawing.Color.White;
+            this.pn_MenuCadastroCliente.Controls.Add(this.label1);
+            this.pn_MenuCadastroCliente.Controls.Add(this.btn_SalvarCliente);
+            this.pn_MenuCadastroCliente.Location = new System.Drawing.Point(-1, 0);
+            this.pn_MenuCadastroCliente.Name = "pn_MenuCadastroCliente";
+            this.pn_MenuCadastroCliente.Size = new System.Drawing.Size(672, 111);
+            this.pn_MenuCadastroCliente.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(270, 83);
+            this.label1.Location = new System.Drawing.Point(265, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Adicionar Cliente ";
+            // 
+            // btn_SalvarCliente
+            // 
+            this.btn_SalvarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_SalvarCliente.BackgroundImage")));
+            this.btn_SalvarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_SalvarCliente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_SalvarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btn_SalvarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_SalvarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalvarCliente.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalvarCliente.ForeColor = System.Drawing.Color.Gray;
+            this.btn_SalvarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_SalvarCliente.Image")));
+            this.btn_SalvarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SalvarCliente.Location = new System.Drawing.Point(270, 22);
+            this.btn_SalvarCliente.Name = "btn_SalvarCliente";
+            this.btn_SalvarCliente.Size = new System.Drawing.Size(133, 66);
+            this.btn_SalvarCliente.TabIndex = 2;
+            this.btn_SalvarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_SalvarCliente.UseVisualStyleBackColor = true;
+            this.btn_SalvarCliente.Click += new System.EventHandler(this.btn_SalvarCliente_Click);
+            // 
+            // pn_CadastroCliente
+            // 
+            this.pn_CadastroCliente.BackColor = System.Drawing.Color.White;
+            this.pn_CadastroCliente.Controls.Add(this.txt_CelularCliente);
+            this.pn_CadastroCliente.Controls.Add(this.txt_TelefoneCliente);
+            this.pn_CadastroCliente.Controls.Add(this.txt_EnderecoCliente);
+            this.pn_CadastroCliente.Controls.Add(this.txt_NomeCliente);
+            this.pn_CadastroCliente.Controls.Add(this.label5);
+            this.pn_CadastroCliente.Controls.Add(this.label4);
+            this.pn_CadastroCliente.Controls.Add(this.label3);
+            this.pn_CadastroCliente.Controls.Add(this.label2);
+            this.pn_CadastroCliente.Location = new System.Drawing.Point(-1, 117);
+            this.pn_CadastroCliente.Name = "pn_CadastroCliente";
+            this.pn_CadastroCliente.Size = new System.Drawing.Size(672, 273);
+            this.pn_CadastroCliente.TabIndex = 1;
+            // 
+            // txt_CelularCliente
+            // 
+            this.txt_CelularCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CelularCliente.Location = new System.Drawing.Point(113, 194);
+            this.txt_CelularCliente.Mask = "(999) 000-0000";
+            this.txt_CelularCliente.Name = "txt_CelularCliente";
+            this.txt_CelularCliente.Size = new System.Drawing.Size(153, 26);
+            this.txt_CelularCliente.TabIndex = 7;
+            // 
+            // txt_TelefoneCliente
+            // 
+            this.txt_TelefoneCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TelefoneCliente.Location = new System.Drawing.Point(113, 142);
+            this.txt_TelefoneCliente.Mask = "(999) 000-0000";
+            this.txt_TelefoneCliente.Name = "txt_TelefoneCliente";
+            this.txt_TelefoneCliente.Size = new System.Drawing.Size(153, 26);
+            this.txt_TelefoneCliente.TabIndex = 6;
+            // 
+            // txt_EnderecoCliente
+            // 
+            this.txt_EnderecoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_EnderecoCliente.Location = new System.Drawing.Point(113, 85);
+            this.txt_EnderecoCliente.Name = "txt_EnderecoCliente";
+            this.txt_EnderecoCliente.Size = new System.Drawing.Size(544, 26);
+            this.txt_EnderecoCliente.TabIndex = 5;
+            // 
+            // txt_NomeCliente
+            // 
+            this.txt_NomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NomeCliente.Location = new System.Drawing.Point(113, 34);
+            this.txt_NomeCliente.Name = "txt_NomeCliente";
+            this.txt_NomeCliente.Size = new System.Drawing.Size(359, 26);
+            this.txt_NomeCliente.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(13, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Celular:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(13, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Telefone:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(13, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Endereço:";
             // 
             // label2
             // 
@@ -114,108 +180,31 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(13, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Endereço:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(13, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Telefone:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(13, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Celular";
-            // 
-            // txt_NomeCliente
-            // 
-            this.txt_NomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NomeCliente.Location = new System.Drawing.Point(113, 34);
-            this.txt_NomeCliente.Name = "txt_NomeCliente";
-            this.txt_NomeCliente.Size = new System.Drawing.Size(359, 26);
-            this.txt_NomeCliente.TabIndex = 4;
-            // 
-            // txt_EnderecoCliente
-            // 
-            this.txt_EnderecoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_EnderecoCliente.Location = new System.Drawing.Point(113, 89);
-            this.txt_EnderecoCliente.Name = "txt_EnderecoCliente";
-            this.txt_EnderecoCliente.Size = new System.Drawing.Size(544, 26);
-            this.txt_EnderecoCliente.TabIndex = 5;
-            // 
-            // txt_TelefoneCliente
-            // 
-            this.txt_TelefoneCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TelefoneCliente.Location = new System.Drawing.Point(113, 146);
-            this.txt_TelefoneCliente.Mask = "(999) 000-0000";
-            this.txt_TelefoneCliente.Name = "txt_TelefoneCliente";
-            this.txt_TelefoneCliente.Size = new System.Drawing.Size(153, 26);
-            this.txt_TelefoneCliente.TabIndex = 6;
-            // 
-            // txt_CelularCliente
-            // 
-            this.txt_CelularCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CelularCliente.Location = new System.Drawing.Point(113, 208);
-            this.txt_CelularCliente.Mask = "(999) 000-0000";
-            this.txt_CelularCliente.Name = "txt_CelularCliente";
-            this.txt_CelularCliente.Size = new System.Drawing.Size(153, 26);
-            this.txt_CelularCliente.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(289, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // f_CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(668, 392);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pn_CadastroCliente);
+            this.Controls.Add(this.pn_MenuCadastroCliente);
             this.Name = "f_CadastroCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f_CadastroCliente";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pn_MenuCadastroCliente.ResumeLayout(false);
+            this.pn_MenuCadastroCliente.PerformLayout();
+            this.pn_CadastroCliente.ResumeLayout(false);
+            this.pn_CadastroCliente.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pn_MenuCadastroCliente;
+        private System.Windows.Forms.Panel pn_CadastroCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Button btn_SalvarCliente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -224,6 +213,5 @@
         private System.Windows.Forms.MaskedTextBox txt_TelefoneCliente;
         private System.Windows.Forms.TextBox txt_EnderecoCliente;
         private System.Windows.Forms.TextBox txt_NomeCliente;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

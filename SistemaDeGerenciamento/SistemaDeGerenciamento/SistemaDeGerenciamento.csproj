@@ -49,6 +49,7 @@
     <Compile Include="Classe Banco de Dados\c_Conexao.cs" />
     <Compile Include="Classe Banco de Dados\c_EnviarClienteBanco.cs" />
     <Compile Include="Classe Banco de Dados\c_EnviarEntradaBanco.cs" />
+    <Compile Include="Classe de Validações\c_ValidarCliente.cs" />
     <Compile Include="Classe de Validações\c_ValidarPesquisa.cs" />
     <Compile Include="Classes de Atributos\c_Cliente.cs" />
     <Compile Include="Classes de Atributos\c_Entrada.cs" />
@@ -66,6 +67,12 @@
     <Compile Include="f_CadastroCliente.Designer.cs">
       <DependentUpon>f_CadastroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="f_CadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_CadastroProduto.Designer.cs">
+      <DependentUpon>f_CadastroProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -73,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f_CadastroCliente.resx">
       <DependentUpon>f_CadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_CadastroProduto.resx">
+      <DependentUpon>f_CadastroProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

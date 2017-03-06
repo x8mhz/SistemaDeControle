@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaDeGerenciamento.Classe_de_Validações
+namespace SistemaDeGerenciamento
 {
     class c_ValidarPesquisa
     {

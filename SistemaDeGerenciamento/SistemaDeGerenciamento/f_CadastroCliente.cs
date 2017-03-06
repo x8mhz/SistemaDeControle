@@ -16,5 +16,38 @@ namespace SistemaDeGerenciamento
         {
             InitializeComponent();
         }
+
+        private void btn_SalvarCliente_Click(object sender, EventArgs e)
+        {
+            if (c_ValidarCliente.ValidarNomeCliente(txt_NomeCliente.Text).Equals(false))
+            {
+
+            }
+            else
+            {
+                if (c_ValidarCliente.ValidarEnderecoCliente(txt_EnderecoCliente.Text).Equals(false))
+                {
+
+                }
+                else
+                {
+                    if (c_ValidarCliente.ValidarTelefone(txt_TelefoneCliente.Text).Equals(false))
+                    {
+
+                    }
+                    else
+                    {
+                        if (c_ValidarCliente.ValidarTelefone(txt_CelularCliente.Text).Equals(false))
+                        {
+
+                        }
+                        else
+                        {
+                            // ENVIAR PARA O BANCO DE CLIENTE
+                        }
+                    }
+                }
+            }
+        }
     }
 }

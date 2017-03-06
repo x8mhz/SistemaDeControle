@@ -90,5 +90,11 @@ namespace SistemaDeGerenciamento
             f_CadastroCliente cadastro_Cliente = new f_CadastroCliente();
             cadastro_Cliente.Visible = true;
         }
+
+        private void btn_AddProduto_Click(object sender, EventArgs e)
+        {
+            f_CadastroProduto cadastro_Produto = new f_CadastroProduto();
+            cadastro_Produto.Visible = true;
+        }
     }
 }

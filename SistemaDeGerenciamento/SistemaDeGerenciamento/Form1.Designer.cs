@@ -344,6 +344,7 @@
             this.btn_AddProduto.Size = new System.Drawing.Size(45, 28);
             this.btn_AddProduto.TabIndex = 19;
             this.btn_AddProduto.UseVisualStyleBackColor = false;
+            this.btn_AddProduto.Click += new System.EventHandler(this.btn_AddProduto_Click);
             // 
             // label1
             // 

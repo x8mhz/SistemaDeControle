@@ -10,7 +10,7 @@ namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
     {
         private c_Conexao con;
 
-        public void EnviarClienteBanco()
+        public c_EnviarClienteBanco(int iDClinte, string nomeCliente, string enderecoCliente, string telefoneCliente, string celularCliente) : base(iDClinte, nomeCliente, enderecoCliente, telefoneCliente, celularCliente)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
             {
                 // ...
             }
-
         }
+
     }
 }
