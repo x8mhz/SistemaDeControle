@@ -62,22 +62,22 @@
             this.pn_TabControle = new System.Windows.Forms.Panel();
             this.tab_Controle = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.toolStrip_Rodape = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_DataHoraAtual = new System.Windows.Forms.ToolStripLabel();
             this.grid_Entrada = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grid_Cliente = new System.Windows.Forms.DataGridView();
+            this.toolStrip_Rodape = new System.Windows.Forms.ToolStrip();
+            this.lbl_DataHoraAtual = new System.Windows.Forms.ToolStripLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pn_Menu.SuspendLayout();
             this.pn_Entrada.SuspendLayout();
             this.pn_PagoOuNao.SuspendLayout();
             this.pn_TabControle.SuspendLayout();
             this.tab_Controle.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.toolStrip_Rodape.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Entrada)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Cliente)).BeginInit();
+            this.toolStrip_Rodape.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_Menu
@@ -327,6 +327,7 @@
             this.btn_AddCliente.Size = new System.Drawing.Size(45, 28);
             this.btn_AddCliente.TabIndex = 20;
             this.btn_AddCliente.UseVisualStyleBackColor = false;
+            this.btn_AddCliente.Click += new System.EventHandler(this.btn_AddCliente_Click);
             // 
             // btn_AddProduto
             // 
@@ -513,6 +514,17 @@
             this.tabPage1.Text = "      Entrada";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // grid_Entrada
+            // 
+            this.grid_Entrada.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.grid_Entrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grid_Entrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_Entrada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_Entrada.Location = new System.Drawing.Point(3, 3);
+            this.grid_Entrada.Name = "grid_Entrada";
+            this.grid_Entrada.Size = new System.Drawing.Size(765, 471);
+            this.grid_Entrada.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.grid_Cliente);
@@ -526,6 +538,17 @@
             this.tabPage2.Text = "      Cliente";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // grid_Cliente
+            // 
+            this.grid_Cliente.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.grid_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grid_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_Cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_Cliente.Location = new System.Drawing.Point(3, 3);
+            this.grid_Cliente.Name = "grid_Cliente";
+            this.grid_Cliente.Size = new System.Drawing.Size(765, 471);
+            this.grid_Cliente.TabIndex = 0;
+            // 
             // toolStrip_Rodape
             // 
             this.toolStrip_Rodape.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -537,6 +560,11 @@
             this.toolStrip_Rodape.TabIndex = 3;
             this.toolStrip_Rodape.Text = "toolStrip1";
             // 
+            // lbl_DataHoraAtual
+            // 
+            this.lbl_DataHoraAtual.Name = "lbl_DataHoraAtual";
+            this.lbl_DataHoraAtual.Size = new System.Drawing.Size(0, 22);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
@@ -545,33 +573,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1257, 681);
             this.panel1.TabIndex = 5;
-            // 
-            // lbl_DataHoraAtual
-            // 
-            this.lbl_DataHoraAtual.Name = "lbl_DataHoraAtual";
-            this.lbl_DataHoraAtual.Size = new System.Drawing.Size(0, 22);
-            // 
-            // grid_Entrada
-            // 
-            this.grid_Entrada.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.grid_Entrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grid_Entrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_Entrada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_Entrada.Location = new System.Drawing.Point(3, 3);
-            this.grid_Entrada.Name = "grid_Entrada";
-            this.grid_Entrada.Size = new System.Drawing.Size(765, 471);
-            this.grid_Entrada.TabIndex = 0;
-            // 
-            // grid_Cliente
-            // 
-            this.grid_Cliente.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.grid_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grid_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_Cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_Cliente.Location = new System.Drawing.Point(3, 3);
-            this.grid_Cliente.Name = "grid_Cliente";
-            this.grid_Cliente.Size = new System.Drawing.Size(765, 471);
-            this.grid_Cliente.TabIndex = 0;
             // 
             // Form1
             // 
@@ -598,11 +599,11 @@
             this.pn_TabControle.ResumeLayout(false);
             this.tab_Controle.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Entrada)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Cliente)).EndInit();
             this.toolStrip_Rodape.ResumeLayout(false);
             this.toolStrip_Rodape.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_Entrada)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_Cliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

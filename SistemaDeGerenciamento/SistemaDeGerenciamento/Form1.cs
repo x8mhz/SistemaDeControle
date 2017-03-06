@@ -84,5 +84,11 @@ namespace SistemaDeGerenciamento
                 }
             }
         }
+
+        private void btn_AddCliente_Click(object sender, EventArgs e)
+        {
+            f_CadastroCliente cadastro_Cliente = new f_CadastroCliente();
+            cadastro_Cliente.Visible = true;
+        }
     }
 }
