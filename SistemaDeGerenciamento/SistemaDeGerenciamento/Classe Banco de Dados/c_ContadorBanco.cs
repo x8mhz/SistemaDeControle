@@ -21,5 +21,12 @@ namespace SistemaDeGerenciamento
             con.CommandText(@"SELECT COUNT(*) FROM tb_Cliente");
             return 1 + con.Contador();
         }
+
+        public static int ContadorProduto()
+        {
+            c_Conexao con = new c_Conexao();
+            con.CommandText(@"SELECT COUNT(*) FROM tb_Cliente");
+            return 1 + con.Contador();
+        }
     }
 }
