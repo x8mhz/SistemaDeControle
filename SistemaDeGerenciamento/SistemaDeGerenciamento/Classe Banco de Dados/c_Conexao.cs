@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
+namespace SistemaDeGerenciamento
 {
     class c_Conexao
     {
@@ -16,25 +16,32 @@ namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
 
         public c_Conexao()
         {
-            con = new SqlConnection(@"");
+            con = new SqlConnection(@"Data Source=DESKTOP-NTF36S4;Initial Catalog=BD_Entrada;Integrated Security=True");
             con.Open();
         }
 
-        public void Escrita(string str_cmd)
+        public void CommandText(string str_cmd)
         {
             cmd = new SqlCommand(str_cmd);
             cmd.Connection = con;
         }
 
-        public void SemConsulta()
+        public void NoQuery()
         {
             cmd.ExecuteNonQuery();
         }
 
-        public void Leitura(string str_cmd)
+        public int Contador()
         {
-            cmd = new SqlCommand(str_cmd);
             dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                return dr.GetInt32(0);
+            }
+            else
+            {
+                return -1;
+            }               
         }
 
         public void FecharConexao()

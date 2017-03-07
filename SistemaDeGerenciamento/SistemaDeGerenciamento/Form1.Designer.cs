@@ -361,6 +361,8 @@
             // 
             this.txt_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Cliente.FormattingEnabled = true;
+            this.txt_Cliente.Items.AddRange(new object[] {
+            "Fabricio Ramos, Rua General, 33730026"});
             this.txt_Cliente.Location = new System.Drawing.Point(105, 132);
             this.txt_Cliente.Name = "txt_Cliente";
             this.txt_Cliente.Size = new System.Drawing.Size(293, 28);
@@ -412,6 +414,7 @@
             // 
             // txt_Codigo
             // 
+            this.txt_Codigo.Enabled = false;
             this.txt_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Codigo.Location = new System.Drawing.Point(105, 32);
             this.txt_Codigo.Name = "txt_Codigo";
@@ -422,6 +425,8 @@
             // 
             this.txt_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Produto.FormattingEnabled = true;
+            this.txt_Produto.Items.AddRange(new object[] {
+            "Computador, SEMMARCA, MAXTRO"});
             this.txt_Produto.Location = new System.Drawing.Point(105, 82);
             this.txt_Produto.Name = "txt_Produto";
             this.txt_Produto.Size = new System.Drawing.Size(293, 28);

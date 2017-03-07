@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace SistemaDeGerenciamento
@@ -9,18 +10,10 @@ namespace SistemaDeGerenciamento
     class c_ValidarEntrada
     {
 
-        public static bool ValidarCodigo(string cod)
-        {
-            if (cod.Equals(""))
-            {
-                return true;
-            }
-            return false;
-        }
 
-        public static bool ValidarProduto( string pro)
+        public static bool ValidarProduto(string pro)
         {
-            if (pro.Equals(""))
+            if (!pro.Equals(""))
             {
                 return true;
             }
@@ -29,7 +22,7 @@ namespace SistemaDeGerenciamento
 
         public static bool ValidarCliente(string cli)
         {
-            if (cli.Equals(""))
+            if (!cli.Equals(""))
             {
                 return true;
             }
@@ -38,7 +31,8 @@ namespace SistemaDeGerenciamento
 
         public static bool ValidarEntrada(string ent)
         {
-            if (ent.Equals(""))
+            Regex rx = new Regex(@"^([0]?[0-9]|[12][0-9]|[3][01])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$");
+            if (rx.IsMatch(ent))
             {
                 return true;
             }
@@ -47,7 +41,8 @@ namespace SistemaDeGerenciamento
 
         public static bool ValidarSaida(string sai)
         {
-            if (sai.Equals(""))
+            Regex rx = new Regex(@"^([0]?[0-9]|[12][0-9]|[3][01])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$");
+            if (!rx.IsMatch(sai))
             {
                 return true;
             }
@@ -56,7 +51,7 @@ namespace SistemaDeGerenciamento
 
         public static bool ValidarValor(string val)
         {
-            if (val.Equals(""))
+            if (!val.Equals(""))
             {
                 return true;
             }
@@ -65,7 +60,7 @@ namespace SistemaDeGerenciamento
 
         public static bool ValidarDefeito(string def)
         {
-            if (def.Equals(""))
+            if (!def.Equals(""))
             {
                 return true;
             }

@@ -9,15 +9,15 @@ namespace SistemaDeGerenciamento
     class c_Entrada
     {
         public int CodigoEntrada { get; set; }
-        public c_Produto ProdutoEntrada { get; set; }
-        public c_Cliente ClienteEntrada { get; set; }
+        public string ProdutoEntrada { get; set; }
+        public string ClienteEntrada { get; set; }
         public string DataEntrada { get; set; }
         public string DataSaida { get; set; }
-        public string ValorEntrada { get; set; }
+        public decimal ValorEntrada { get; set; }
         public string PagoEntrada { get; set; }
         public string DefeitoEntrada { get; set; }
 
-        public c_Entrada(int codigoEntrada, c_Produto produtoEntrada, c_Cliente clienteEntrada, string dataEntrada, string dataSaida, string valorEntrada, string pagoEntrada, string defeitoEntrada)
+        public c_Entrada(int codigoEntrada, string produtoEntrada, string clienteEntrada, string dataEntrada, string dataSaida, decimal valorEntrada, string pagoEntrada, string defeitoEntrada)
         {
             CodigoEntrada = codigoEntrada;
             ProdutoEntrada = produtoEntrada;

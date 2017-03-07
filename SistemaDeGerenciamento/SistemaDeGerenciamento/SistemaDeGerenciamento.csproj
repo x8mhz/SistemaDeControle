@@ -46,9 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD_EntradaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_EntradaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classe Banco de Dados\c_Conexao.cs" />
+    <Compile Include="Classe Banco de Dados\c_ContadorBanco.cs" />
     <Compile Include="Classe Banco de Dados\c_EnviarClienteBanco.cs" />
     <Compile Include="Classe Banco de Dados\c_EnviarEntradaBanco.cs" />
+    <Compile Include="Classe Banco de Dados\c_EnviarProdutoBanco.cs" />
     <Compile Include="Classe de Validações\c_ValidarCliente.cs" />
     <Compile Include="Classe de Validações\c_ValidarPesquisa.cs" />
     <Compile Include="Classes de Atributos\c_Cliente.cs" />
@@ -93,6 +100,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BD_EntradaDataSet.xsc">
+      <DependentUpon>BD_EntradaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_EntradaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_EntradaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_EntradaDataSet.xss">
+      <DependentUpon>BD_EntradaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

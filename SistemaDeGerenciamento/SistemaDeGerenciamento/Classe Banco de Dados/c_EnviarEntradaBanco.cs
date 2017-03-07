@@ -1,34 +1,37 @@
-﻿using System;
+﻿using SistemaDeGerenciamento.Classe_Banco_de_Dados;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
+namespace SistemaDeGerenciamento
 {
     class c_EnviarEntradaBanco : c_Entrada
     {
         private c_Conexao con;
-        public c_EnviarEntradaBanco(int codigoEntrada, c_Produto produtoEntrada, c_Cliente clienteEntrada, string dataEntrada, string dataSaida, string valorEntrada, string pagoEntrada, string defeitoEntrada) : base(codigoEntrada, produtoEntrada, clienteEntrada, dataEntrada, dataSaida, valorEntrada, pagoEntrada, defeitoEntrada)
+        public c_EnviarEntradaBanco(int codigoEntrada, string produtoEntrada, string clienteEntrada, string dataEntrada, string dataSaida, decimal valorEntrada, string pagoEntrada, string defeitoEntrada) : base(codigoEntrada, produtoEntrada, clienteEntrada, dataEntrada, dataSaida, valorEntrada, pagoEntrada, defeitoEntrada)
         {
             try
             {
                 con = new c_Conexao();
-                con.Escrita(@"INSERT INTO -------- (produto, cliente, entrada, saida, valor, pago, defeito) VALUES (@produto, @cliente, @entrada, @saida, @valor, @pago, @defeito");
+                con.CommandText(@"INSERT INTO tb_Entrada (cod, produto, cliente, entrada, saida, valor, pago, defeito) VALUES (@cod, @produto, @cliente, @entrada, @saida, @valor, @pago, @defeito)");
+                con.cmd.Parameters.AddWithValue("@cod", CodigoEntrada);
                 con.cmd.Parameters.AddWithValue("@produto", ProdutoEntrada);
-                con.cmd.Parameters.AddWithValue(@"cliente", ClienteEntrada);
-                con.cmd.Parameters.AddWithValue(@"entrada", DataEntrada);
-                con.cmd.Parameters.AddWithValue(@"saida", DataSaida);
-                con.cmd.Parameters.AddWithValue(@"valor", ValorEntrada);
-                con.cmd.Parameters.AddWithValue(@"pago", PagoEntrada);
-                con.cmd.Parameters.AddWithValue(@"defeito", DefeitoEntrada);
+                con.cmd.Parameters.AddWithValue("@cliente", ClienteEntrada);
+                con.cmd.Parameters.AddWithValue("@entrada", DataEntrada);
+                con.cmd.Parameters.AddWithValue("@saida", DataSaida);
+                con.cmd.Parameters.AddWithValue("@valor", ValorEntrada);
+                con.cmd.Parameters.AddWithValue("@pago", PagoEntrada);
+                con.cmd.Parameters.AddWithValue("@defeito", DefeitoEntrada);
 
-                con.SemConsulta();
+                con.NoQuery();
                 con.FecharConexao();
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                // ...
+                MessageBox.Show("Erro: " + ex);
             }
 
 

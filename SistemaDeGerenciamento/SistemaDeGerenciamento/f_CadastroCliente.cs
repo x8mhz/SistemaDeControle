@@ -44,6 +44,8 @@ namespace SistemaDeGerenciamento
                         else
                         {
                             // ENVIAR PARA O BANCO DE CLIENTE
+                            int contador = Convert.ToInt32(c_ContadorBanco.ContadorBanco());
+                            c_Cliente cliente = new c_Cliente(contador, txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);    
                         }
                     }
                 }

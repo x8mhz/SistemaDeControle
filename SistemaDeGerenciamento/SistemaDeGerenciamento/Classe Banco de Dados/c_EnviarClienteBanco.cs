@@ -15,13 +15,14 @@ namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
             try
             {
                 con = new c_Conexao();
-                con.Escrita(@"INSERT INTO -------- (nome, endereco, telefone, celular) VALUES (@nome, @endereco, @telefone, @celular)");
-                con.cmd.Parameters.AddWithValue(@"nome", NomeCliente);
-                con.cmd.Parameters.AddWithValue(@"endereco", EnderecoCliente);
-                con.cmd.Parameters.AddWithValue(@"telefone", TelefoneCliente);
-                con.cmd.Parameters.AddWithValue(@"celular", CelularCliente);
+                con.CommandText(@"INSERT INTO tb_Cliente (id, nome, endereco, telefone, celular) VALUES (@id, @nome, @endereco, @telefone, @celular)");
+                con.cmd.Parameters.AddWithValue("@id", IDClinte);
+                con.cmd.Parameters.AddWithValue("@nome", NomeCliente);
+                con.cmd.Parameters.AddWithValue("@endereco", EnderecoCliente);
+                con.cmd.Parameters.AddWithValue("@telefone", TelefoneCliente);
+                con.cmd.Parameters.AddWithValue("@celular", CelularCliente);
 
-                con.SemConsulta();
+                con.NoQuery();
                 con.FecharConexao();
             }
             catch (Exception)

@@ -190,7 +190,7 @@
             this.Controls.Add(this.pn_MenuCadastroCliente);
             this.Name = "f_CadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "f_CadastroCliente";
+            this.Text = "Cliente";
             this.pn_MenuCadastroCliente.ResumeLayout(false);
             this.pn_MenuCadastroCliente.PerformLayout();
             this.pn_CadastroCliente.ResumeLayout(false);

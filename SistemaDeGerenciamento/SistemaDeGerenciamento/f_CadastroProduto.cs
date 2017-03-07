@@ -16,5 +16,11 @@ namespace SistemaDeGerenciamento
         {
             InitializeComponent();
         }
+
+        private void btn_Salvar_Click(object sender, EventArgs e)
+        {
+            int contador = Convert.ToInt32(c_ContadorBanco.ContadorBanco());
+            c_EnviarProdutoBanco produto = new c_EnviarProdutoBanco(contador, txt_Produto.Text, txt_Marca.Text, txt_Modelo.Text);
+        }
     }
 }
