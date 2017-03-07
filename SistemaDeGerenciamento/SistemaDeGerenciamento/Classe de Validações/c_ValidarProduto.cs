@@ -1,4 +1,9 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace SistemaDeGerenciamento
 {
     class c_ValidarProduto
@@ -16,18 +21,18 @@ namespace SistemaDeGerenciamento
         {
             if (!mar.Equals(""))
             {
-                return true;
+                return false;
             }
-            return false;
+            return true; ;
         }
 
         public static bool ValidarModelo(string mod)
         {
             if (!mod.Equals(""))
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
     }
 }

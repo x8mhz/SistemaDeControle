@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaDeGerenciamento
@@ -21,7 +28,7 @@ namespace SistemaDeGerenciamento
             {
                 lbl_AvisoProduto.Visible = false;
 
-                if (!c_ValidarProduto.ValidarProduto(txt_Marca.Text).Equals(true))
+                /*if (!c_ValidarProduto.ValidarProduto(txt_Marca.Text).Equals(true))
                 {
 
                 }
@@ -32,13 +39,14 @@ namespace SistemaDeGerenciamento
 
                     }
                     else
-                    {               
+                    {  
+                    */             
                         c_EnviarProdutoBanco produto = new c_EnviarProdutoBanco(c_ContadorBanco.ContadorProduto(), txt_Produto.Text, txt_Marca.Text, txt_Modelo.Text);
                         produto.EnviarProdutoBanco();
                         MessageBox.Show("Adicionado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Dispose();
-                    }
-                }
+                    //}
+               // }
             }          
         }
     }

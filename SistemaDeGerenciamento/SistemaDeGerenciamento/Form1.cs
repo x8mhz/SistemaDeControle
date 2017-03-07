@@ -1,4 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaDeGerenciamento
@@ -124,12 +132,12 @@ namespace SistemaDeGerenciamento
         // ADICIONA NOS CAMPOS DE CLIENTE E PRODUTO A GRID COM O CLICK REFERENTE
         private void grid_Cliente_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txt_Cliente.Items.Add(grid_Cliente.CurrentRow.Cells[0].Value.ToString() + " - " + grid_Cliente.CurrentRow.Cells[1].Value.ToString());
+            txt_Cliente.Text = grid_Cliente.CurrentRow.Cells[0].Value.ToString() + " - " + grid_Cliente.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void grid_Produto_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txt_Produto.Items.Add(grid_Produto.CurrentRow.Cells[0].Value.ToString() + " - " + grid_Produto.CurrentRow.Cells[1].Value.ToString());
+            txt_Produto.Text = grid_Produto.CurrentRow.Cells[0].Value.ToString() + " - " + grid_Produto.CurrentRow.Cells[1].Value.ToString();
         }
         //-------------------------------------------------------------------------
 
@@ -152,6 +160,16 @@ namespace SistemaDeGerenciamento
             {
                 this.tb_ProdutoTableAdapter.Fill(this.bD_SistemaGerenciamentoDataSet.tb_Produto);
             }
+        }
+
+        private void btn_Novo_Click(object sender, EventArgs e)
+        {
+            txt_DataEntrada.Text = Convert.ToString(DateTime.Now);
+            txt_DataSaida.Clear();
+            txt_Valor.Clear();
+            check_PagoNao.Checked = true;
+            check_PagoSim.Checked = false;
+            txt_Defeito.Clear();
         }
         //-------------------------------------------------------------------------
 

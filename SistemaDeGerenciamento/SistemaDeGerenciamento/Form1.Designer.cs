@@ -267,6 +267,7 @@
             this.btn_Novo.Text = "Novo";
             this.btn_Novo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Novo.UseVisualStyleBackColor = true;
+            this.btn_Novo.Click += new System.EventHandler(this.btn_Novo_Click);
             // 
             // pn_Entrada
             // 
@@ -300,7 +301,7 @@
             this.pn_Entrada.Controls.Add(this.txt_DataSaida);
             this.pn_Entrada.Location = new System.Drawing.Point(-8, 117);
             this.pn_Entrada.Name = "pn_Entrada";
-            this.pn_Entrada.Size = new System.Drawing.Size(486, 372);
+            this.pn_Entrada.Size = new System.Drawing.Size(486, 545);
             this.pn_Entrada.TabIndex = 1;
             // 
             // label16
@@ -597,7 +598,7 @@
             this.txt_Defeito.Location = new System.Drawing.Point(105, 401);
             this.txt_Defeito.Multiline = true;
             this.txt_Defeito.Name = "txt_Defeito";
-            this.txt_Defeito.Size = new System.Drawing.Size(363, 0);
+            this.txt_Defeito.Size = new System.Drawing.Size(363, 116);
             this.txt_Defeito.TabIndex = 14;
             // 
             // txt_DataSaida
@@ -619,7 +620,7 @@
             this.pn_TabControle.Controls.Add(this.tab_Controle);
             this.pn_TabControle.Location = new System.Drawing.Point(475, 117);
             this.pn_TabControle.Name = "pn_TabControle";
-            this.pn_TabControle.Size = new System.Drawing.Size(788, 372);
+            this.pn_TabControle.Size = new System.Drawing.Size(788, 545);
             this.pn_TabControle.TabIndex = 2;
             // 
             // tab_Controle
@@ -635,7 +636,7 @@
             this.tab_Controle.Name = "tab_Controle";
             this.tab_Controle.Padding = new System.Drawing.Point(50, 5);
             this.tab_Controle.SelectedIndex = 0;
-            this.tab_Controle.Size = new System.Drawing.Size(779, 350);
+            this.tab_Controle.Size = new System.Drawing.Size(779, 518);
             this.tab_Controle.TabIndex = 0;
             this.tab_Controle.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tab_Controle_MouseClick);
             // 
@@ -648,7 +649,7 @@
             this.tabProduto.Location = new System.Drawing.Point(4, 33);
             this.tabProduto.Name = "tabProduto";
             this.tabProduto.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProduto.Size = new System.Drawing.Size(771, 313);
+            this.tabProduto.Size = new System.Drawing.Size(771, 481);
             this.tabProduto.TabIndex = 1;
             this.tabProduto.Text = "      Entrada";
             this.tabProduto.UseVisualStyleBackColor = true;
@@ -676,7 +677,7 @@
             this.grid_Entrada.DataSource = this.tbEntradaBindingSource;
             this.grid_Entrada.Location = new System.Drawing.Point(3, 3);
             this.grid_Entrada.Name = "grid_Entrada";
-            this.grid_Entrada.Size = new System.Drawing.Size(765, 307);
+            this.grid_Entrada.Size = new System.Drawing.Size(765, 475);
             this.grid_Entrada.TabIndex = 0;
             // 
             // codEntradaDataGridViewTextBoxColumn
@@ -745,7 +746,7 @@
             this.tabCliente.Location = new System.Drawing.Point(4, 33);
             this.tabCliente.Name = "tabCliente";
             this.tabCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCliente.Size = new System.Drawing.Size(771, 477);
+            this.tabCliente.Size = new System.Drawing.Size(771, 313);
             this.tabCliente.TabIndex = 0;
             this.tabCliente.Text = "      Cliente";
             this.tabCliente.UseVisualStyleBackColor = true;
@@ -816,7 +817,7 @@
             this.tabEntrada.Location = new System.Drawing.Point(4, 33);
             this.tabEntrada.Name = "tabEntrada";
             this.tabEntrada.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEntrada.Size = new System.Drawing.Size(771, 477);
+            this.tabEntrada.Size = new System.Drawing.Size(771, 313);
             this.tabEntrada.TabIndex = 2;
             this.tabEntrada.Text = "Produto";
             this.tabEntrada.UseVisualStyleBackColor = true;
@@ -877,7 +878,7 @@
             this.toolStrip_Rodape.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip_Rodape.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbl_DataHoraAtual});
-            this.toolStrip_Rodape.Location = new System.Drawing.Point(0, 492);
+            this.toolStrip_Rodape.Location = new System.Drawing.Point(0, 665);
             this.toolStrip_Rodape.Name = "toolStrip_Rodape";
             this.toolStrip_Rodape.Size = new System.Drawing.Size(1257, 25);
             this.toolStrip_Rodape.TabIndex = 3;
@@ -894,7 +895,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 517);
+            this.panel1.Size = new System.Drawing.Size(1257, 690);
             this.panel1.TabIndex = 5;
             // 
             // tb_EntradaTableAdapter
@@ -914,7 +915,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1257, 517);
+            this.ClientSize = new System.Drawing.Size(1257, 690);
             this.Controls.Add(this.toolStrip_Rodape);
             this.Controls.Add(this.pn_Entrada);
             this.Controls.Add(this.pn_Menu);

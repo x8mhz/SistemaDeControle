@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaDeGerenciamento
@@ -21,12 +28,12 @@ namespace SistemaDeGerenciamento
             {
                 lbl_AvisoNome.Visible = false;
 
-                if (!c_ValidarCliente.ValidarEnderecoCliente(txt_EnderecoCliente.Text).Equals(true))
-                {
+                //if (!c_ValidarCliente.ValidarEnderecoCliente(txt_EnderecoCliente.Text).Equals(true))
+                //{
                     
-                }
-                else
-                {
+               // }
+               // else
+               // {
                     if (!c_ValidarCliente.ValidarTelefone(txt_TelefoneCliente.Text).Equals(true))
                     {
                         lbl_AvisoTelefone.Visible = true;
@@ -49,7 +56,7 @@ namespace SistemaDeGerenciamento
                             MessageBox.Show("Adicionado com sucesso!","Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Dispose();
                         }
-                    }
+                    //}
                 }
             }
         }
