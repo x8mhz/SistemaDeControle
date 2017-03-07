@@ -460,6 +460,7 @@
             this.check_PagoSim.TabIndex = 1;
             this.check_PagoSim.Text = "Sim";
             this.check_PagoSim.UseVisualStyleBackColor = true;
+            this.check_PagoSim.MouseClick += new System.Windows.Forms.MouseEventHandler(this.check_PagoSim_MouseClick);
             // 
             // check_PagoNao
             // 
@@ -474,6 +475,7 @@
             this.check_PagoNao.TabIndex = 0;
             this.check_PagoNao.Text = "Não";
             this.check_PagoNao.UseVisualStyleBackColor = true;
+            this.check_PagoNao.MouseClick += new System.Windows.Forms.MouseEventHandler(this.check_PagoNao_MouseClick);
             // 
             // btn_AddProduto
             // 

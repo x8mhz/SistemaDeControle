@@ -49,12 +49,19 @@ namespace SistemaDeGerenciamento
                         else
                         {
                             lbl_AvisoCelular.Visible = false;
-                                                  
-                            // ENVIAR PARA O BANCO DE CLIENTE
-                            c_EnviarClienteBanco cliente = new c_EnviarClienteBanco(c_ContadorBanco.ContadorCliente(), txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);
-                            cliente.EnviarClienteBanco();
-                            MessageBox.Show("Adicionado com sucesso!","Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Dispose();
+                            try
+                            {
+                                // ENVIAR PARA O BANCO DE CLIENTE
+                                c_EnviarClienteBanco cliente = new c_EnviarClienteBanco(c_ContadorBanco.ContadorCliente(), txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);
+                                cliente.EnviarClienteBanco();
+                                MessageBox.Show("Adicionado com sucesso!", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Dispose();
+                            }   
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Erro: " + ex);
+                            }                  
+                            
                         }
                     //}
                 }

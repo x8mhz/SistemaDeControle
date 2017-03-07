@@ -40,11 +40,19 @@ namespace SistemaDeGerenciamento
                     }
                     else
                     {  
-                    */             
-                        c_EnviarProdutoBanco produto = new c_EnviarProdutoBanco(c_ContadorBanco.ContadorProduto(), txt_Produto.Text, txt_Marca.Text, txt_Modelo.Text);
-                        produto.EnviarProdutoBanco();
-                        MessageBox.Show("Adicionado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Dispose();
+                    */
+                        try
+                        {
+                            c_EnviarProdutoBanco produto = new c_EnviarProdutoBanco(c_ContadorBanco.ContadorProduto(), txt_Produto.Text, txt_Marca.Text, txt_Modelo.Text);
+                            produto.EnviarProdutoBanco();
+                            MessageBox.Show("Adicionado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Dispose();
+                        }   
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Erro: " + ex);
+                        }        
+                        
                     //}
                // }
             }          
