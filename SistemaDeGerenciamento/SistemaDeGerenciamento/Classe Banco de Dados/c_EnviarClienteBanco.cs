@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
+namespace SistemaDeGerenciamento
 {
     class c_EnviarClienteBanco : c_Cliente
     {
+        public c_EnviarClienteBanco(int iDClinte, string nomeCliente, string enderecoCliente, string telefoneCliente, string celularCliente)
+        {
+            IDClinte = iDClinte;
+            NomeCliente = nomeCliente;
+            EnderecoCliente = enderecoCliente;
+            TelefoneCliente = telefoneCliente;
+            CelularCliente = celularCliente;
+        }
         private c_Conexao con;
 
-        public c_EnviarClienteBanco(int iDClinte, string nomeCliente, string enderecoCliente, string telefoneCliente, string celularCliente) : base(iDClinte, nomeCliente, enderecoCliente, telefoneCliente, celularCliente)
+        public void EnviarClienteBanco()
         {
             try
             {
                 con = new c_Conexao();
-                con.CommandText(@"INSERT INTO tb_Cliente (id, nome, endereco, telefone, celular) VALUES (@id, @nome, @endereco, @telefone, @celular)");
-                con.cmd.Parameters.AddWithValue("@id", IDClinte);
+                con.CommandText(@"INSERT INTO tb_Cliente(codCliente, nome, endereco, telefone, celular) VALUES(@codCliente, @nome, @endereco, @telefone, @celular)");
+                con.cmd.Parameters.AddWithValue("@codCliente", IDClinte);
                 con.cmd.Parameters.AddWithValue("@nome", NomeCliente);
                 con.cmd.Parameters.AddWithValue("@endereco", EnderecoCliente);
                 con.cmd.Parameters.AddWithValue("@telefone", TelefoneCliente);
@@ -25,9 +34,9 @@ namespace SistemaDeGerenciamento.Classe_Banco_de_Dados
                 con.NoQuery();
                 con.FecharConexao();
             }
-            catch (Exception)
+            catch (Exception es)
             {
-                // ...
+                MessageBox.Show("ERRO: " + es);
             }
         }
 

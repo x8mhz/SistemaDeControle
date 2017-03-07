@@ -8,11 +8,21 @@ namespace SistemaDeGerenciamento
 {
     class c_EnviarProdutoBanco : c_Produto
     {
-        public c_EnviarProdutoBanco(int iDProduto, string tipoProduto, string marcaProduto, string modeloProduto) : base(iDProduto, tipoProduto, marcaProduto, modeloProduto)
+        public c_EnviarProdutoBanco(int iDProduto, string tipoProduto, string marcaProduto, string modeloProduto)
         {
-            c_Conexao con = new c_Conexao();
-            con.CommandText(@"INSERT INTO tb_Produto(id, produto, marca, modelo) VALUES(@id, @produto, @marca, @modelo)");
-            con.cmd.Parameters.AddWithValue("@id", IDProduto);
+            IDProduto = iDProduto;
+            TipoProduto = tipoProduto;
+            MarcaProduto = marcaProduto;
+            ModeloProduto = modeloProduto;
+        }
+
+        private c_Conexao con;
+
+        public void EnviarProdutoBanco()
+        {
+           con = new c_Conexao();
+            con.CommandText(@"INSERT INTO tb_Produto(codProduto, produto, marca, modelo) VALUES(@codProduto, @produto, @marca, @modelo)");
+            con.cmd.Parameters.AddWithValue("@codProduto", IDProduto);
             con.cmd.Parameters.AddWithValue("@produto", TipoProduto);
             con.cmd.Parameters.AddWithValue("@marca", MarcaProduto);
             con.cmd.Parameters.AddWithValue("@modelo", ModeloProduto);

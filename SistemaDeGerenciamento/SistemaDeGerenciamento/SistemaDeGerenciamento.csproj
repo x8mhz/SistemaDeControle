@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BD_EntradaDataSet.Designer.cs">
+    <Compile Include="BD_SistemaGerenciamentoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BD_EntradaDataSet.xsd</DependentUpon>
+      <DependentUpon>BD_SistemaGerenciamentoDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Classe Banco de Dados\c_Conexao.cs" />
     <Compile Include="Classe Banco de Dados\c_ContadorBanco.cs" />
@@ -58,6 +58,7 @@
     <Compile Include="Classe Banco de Dados\c_EnviarProdutoBanco.cs" />
     <Compile Include="Classe de Validações\c_ValidarCliente.cs" />
     <Compile Include="Classe de Validações\c_ValidarPesquisa.cs" />
+    <Compile Include="Classe de Validações\c_ValidarProduto.cs" />
     <Compile Include="Classes de Atributos\c_Cliente.cs" />
     <Compile Include="Classes de Atributos\c_Entrada.cs" />
     <Compile Include="Classes de Atributos\c_Produto.cs" />
@@ -100,16 +101,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BD_EntradaDataSet.xsc">
-      <DependentUpon>BD_EntradaDataSet.xsd</DependentUpon>
+    <None Include="BD_SistemaGerenciamentoDataSet.xsc">
+      <DependentUpon>BD_SistemaGerenciamentoDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BD_EntradaDataSet.xsd">
+    <None Include="BD_SistemaGerenciamentoDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BD_EntradaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BD_SistemaGerenciamentoDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BD_EntradaDataSet.xss">
-      <DependentUpon>BD_EntradaDataSet.xsd</DependentUpon>
+    <None Include="BD_SistemaGerenciamentoDataSet.xss">
+      <DependentUpon>BD_SistemaGerenciamentoDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

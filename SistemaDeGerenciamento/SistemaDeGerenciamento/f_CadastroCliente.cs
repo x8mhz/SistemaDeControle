@@ -19,33 +19,32 @@ namespace SistemaDeGerenciamento
 
         private void btn_SalvarCliente_Click(object sender, EventArgs e)
         {
-            if (c_ValidarCliente.ValidarNomeCliente(txt_NomeCliente.Text).Equals(false))
+            if (!c_ValidarCliente.ValidarNomeCliente(txt_NomeCliente.Text).Equals(true))
             {
-
+                MessageBox.Show("ERRO: 1");
             }
             else
             {
-                if (c_ValidarCliente.ValidarEnderecoCliente(txt_EnderecoCliente.Text).Equals(false))
+                if (!c_ValidarCliente.ValidarEnderecoCliente(txt_EnderecoCliente.Text).Equals(true))
                 {
-
+                    MessageBox.Show("ERRO: 2");
                 }
                 else
                 {
-                    if (c_ValidarCliente.ValidarTelefone(txt_TelefoneCliente.Text).Equals(false))
+                    if (!c_ValidarCliente.ValidarTelefone(txt_TelefoneCliente.Text).Equals(true))
                     {
-
+                        MessageBox.Show("ERRO: 3");
                     }
                     else
                     {
-                        if (c_ValidarCliente.ValidarTelefone(txt_CelularCliente.Text).Equals(false))
+                        if (!c_ValidarCliente.ValidarTelefone(txt_CelularCliente.Text).Equals(true))
                         {
-
+                            MessageBox.Show("ERRO: 4");
                         }
                         else
-                        {
+                        {                         
                             // ENVIAR PARA O BANCO DE CLIENTE
-                            int contador = Convert.ToInt32(c_ContadorBanco.ContadorBanco());
-                            c_Cliente cliente = new c_Cliente(contador, txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);    
+                            c_EnviarClienteBanco cliente = new c_EnviarClienteBanco(c_ContadorBanco.ContadorCliente(), txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);    
                         }
                     }
                 }

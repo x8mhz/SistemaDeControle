@@ -16,7 +16,7 @@ namespace SistemaDeGerenciamento
 
         public c_Conexao()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-NTF36S4;Initial Catalog=BD_Entrada;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=DESKTOP-NTF36S4;Initial Catalog=BD_SistemaGerenciamento;Integrated Security=True");
             con.Open();
         }
 

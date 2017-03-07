@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenciamento
 {
-    class c_ValidarCliente
+    class c_ValidarProduto
     {
-        public static bool ValidarNomeCliente(string nom)
+        public static bool ValidarProduto(string prod)
         {
-            if (!nom.Equals(""))
+            if (!prod.Equals(""))
             {
                 return true;
             }
             return false;
         }
 
-        public static bool ValidarEnderecoCliente(string end)
+        public static bool ValidarMarca(string mar)
         {
-            if (!end.Equals(""))
+            if (!mar.Equals(""))
             {
                 return true;
             }
             return false;
         }
 
-        public static bool ValidarTelefone(string tel)
+        public static bool ValidarModelo(string mod)
         {
-            if (!tel.Equals(""))
+            if (!mod.Equals(""))
             {
                 return true;
             }

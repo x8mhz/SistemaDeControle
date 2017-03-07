@@ -8,10 +8,24 @@ namespace SistemaDeGerenciamento
 {
     class c_ContadorBanco
     {
-        public static int ContadorBanco()
+        public static int ContadorEntrada()
         {
             c_Conexao con = new c_Conexao();
             con.CommandText(@"SELECT COUNT(*) FROM tb_Entrada");
+            return 1 + con.Contador();
+        }
+
+        public static int ContadorCliente()
+        {
+            c_Conexao con = new c_Conexao();
+            con.CommandText(@"SELECT COUNT(*) FROM tb_Cliente");
+            return 1 + con.Contador();
+        }
+
+        public static int ContadorProduto()
+        {
+            c_Conexao con = new c_Conexao();
+            con.CommandText(@"SELECT COUNT(*) FROM tb_Produto");
             return 1 + con.Contador();
         }
     }

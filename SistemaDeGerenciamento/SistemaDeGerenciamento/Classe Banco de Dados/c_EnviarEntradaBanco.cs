@@ -1,4 +1,4 @@
-﻿using SistemaDeGerenciamento.Classe_Banco_de_Dados;
+﻿using SistemaDeGerenciamento;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +10,26 @@ namespace SistemaDeGerenciamento
 {
     class c_EnviarEntradaBanco : c_Entrada
     {
+        public c_EnviarEntradaBanco(int codigoEntrada, string produtoEntrada, string clienteEntrada, string dataEntrada, string dataSaida, decimal valorEntrada, string pagoEntrada, string defeitoEntrada)
+        {
+            CodigoEntrada = codigoEntrada;
+            ProdutoEntrada = produtoEntrada;
+            ClienteEntrada = clienteEntrada;
+            DataEntrada = dataEntrada;
+            DataSaida = dataSaida;
+            ValorEntrada = valorEntrada;
+            PagoEntrada = pagoEntrada;
+            DefeitoEntrada = defeitoEntrada;
+        }
+
         private c_Conexao con;
-        public c_EnviarEntradaBanco(int codigoEntrada, string produtoEntrada, string clienteEntrada, string dataEntrada, string dataSaida, decimal valorEntrada, string pagoEntrada, string defeitoEntrada) : base(codigoEntrada, produtoEntrada, clienteEntrada, dataEntrada, dataSaida, valorEntrada, pagoEntrada, defeitoEntrada)
+        public void EnviarEntradaBanco()
         {
             try
             {
                 con = new c_Conexao();
-                con.CommandText(@"INSERT INTO tb_Entrada (cod, produto, cliente, entrada, saida, valor, pago, defeito) VALUES (@cod, @produto, @cliente, @entrada, @saida, @valor, @pago, @defeito)");
-                con.cmd.Parameters.AddWithValue("@cod", CodigoEntrada);
+                con.CommandText(@"INSERT INTO tb_Entrada(codEntrada, produto, cliente, entrada, saida, valor, pago, defeito) VALUES(@codEntrada, @produto, @cliente, @entrada, @saida, @valor, @pago, @defeito)");
+                con.cmd.Parameters.AddWithValue("@codEntrada", CodigoEntrada);
                 con.cmd.Parameters.AddWithValue("@produto", ProdutoEntrada);
                 con.cmd.Parameters.AddWithValue("@cliente", ClienteEntrada);
                 con.cmd.Parameters.AddWithValue("@entrada", DataEntrada);

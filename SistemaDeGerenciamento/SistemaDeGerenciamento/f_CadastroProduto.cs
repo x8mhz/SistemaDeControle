@@ -19,8 +19,30 @@ namespace SistemaDeGerenciamento
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            int contador = Convert.ToInt32(c_ContadorBanco.ContadorBanco());
-            c_EnviarProdutoBanco produto = new c_EnviarProdutoBanco(contador, txt_Produto.Text, txt_Marca.Text, txt_Modelo.Text);
+         
+            if (!c_ValidarProduto.ValidarProduto(txt_Produto.Text).Equals(true))
+            {
+
+            }
+            else
+            {
+                if (!c_ValidarProduto.ValidarProduto(txt_Marca.Text).Equals(true))
+                {
+
+                }
+                else
+                {
+                    if (!c_ValidarProduto.ValidarProduto(txt_Modelo.Text).Equals(true))
+                    {
+
+                    }
+                    else
+                    {               
+                        c_EnviarProdutoBanco produto = new c_EnviarProdutoBanco(c_ContadorBanco.ContadorProduto(), txt_Produto.Text, txt_Marca.Text, txt_Modelo.Text);
+                        produto.EnviarProdutoBanco();
+                    }
+                }
+            }          
         }
     }
 }

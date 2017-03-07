@@ -12,13 +12,5 @@ namespace SistemaDeGerenciamento
         public string TipoProduto { get; set; }
         public string MarcaProduto { get; set; }
         public string ModeloProduto { get; set; }
-
-        public c_Produto(int iDProduto, string tipoProduto, string marcaProduto, string modeloProduto)
-        {
-            IDProduto = iDProduto;
-            TipoProduto = tipoProduto;
-            MarcaProduto = marcaProduto;
-            ModeloProduto = modeloProduto;
-        }
     }
 }

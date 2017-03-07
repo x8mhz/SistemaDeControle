@@ -43,5 +43,16 @@ namespace SistemaDeGerenciamento.Properties {
                 return ((string)(this["BD_EntradaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-NTF36S4;Initial Catalog=BD_SistemaGerenciamento;Integrated Se" +
+            "curity=True")]
+        public string BD_SistemaGerenciamentoConnectionString {
+            get {
+                return ((string)(this["BD_SistemaGerenciamentoConnectionString"]));
+            }
+        }
     }
 }

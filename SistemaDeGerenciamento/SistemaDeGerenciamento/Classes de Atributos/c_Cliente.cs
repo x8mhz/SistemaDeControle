@@ -14,13 +14,6 @@ namespace SistemaDeGerenciamento
         public string TelefoneCliente { get; set; }
         public string CelularCliente { get; set; }
 
-        public c_Cliente(int iDClinte, string nomeCliente, string enderecoCliente, string telefoneCliente, string celularCliente)
-        {
-            IDClinte = iDClinte;
-            NomeCliente = nomeCliente;
-            EnderecoCliente = enderecoCliente;
-            TelefoneCliente = telefoneCliente;
-            CelularCliente = celularCliente;
-        }
+
     }
 }
