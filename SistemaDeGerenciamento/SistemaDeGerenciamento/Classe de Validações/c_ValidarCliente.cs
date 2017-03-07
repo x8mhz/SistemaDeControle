@@ -19,10 +19,7 @@ namespace SistemaDeGerenciamento
 
         public static bool ValidarEnderecoCliente(string end)
         {
-            if (!end.Equals(""))
-            {
-                return true;
-            }
+            // PARA CASO QUERIA COLOCAR UMA RESTRIÇÃO
             return false;
         }
 

@@ -41,6 +41,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_AvisoNome = new System.Windows.Forms.Label();
+            this.lbl_AvisoTelefone = new System.Windows.Forms.Label();
+            this.lbl_AvisoCelular = new System.Windows.Forms.Label();
             this.pn_MenuCadastroCliente.SuspendLayout();
             this.pn_CadastroCliente.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +92,9 @@
             // pn_CadastroCliente
             // 
             this.pn_CadastroCliente.BackColor = System.Drawing.Color.White;
+            this.pn_CadastroCliente.Controls.Add(this.lbl_AvisoCelular);
+            this.pn_CadastroCliente.Controls.Add(this.lbl_AvisoTelefone);
+            this.pn_CadastroCliente.Controls.Add(this.lbl_AvisoNome);
             this.pn_CadastroCliente.Controls.Add(this.txt_CelularCliente);
             this.pn_CadastroCliente.Controls.Add(this.txt_TelefoneCliente);
             this.pn_CadastroCliente.Controls.Add(this.txt_EnderecoCliente);
@@ -180,6 +186,39 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome:";
             // 
+            // lbl_AvisoNome
+            // 
+            this.lbl_AvisoNome.AutoSize = true;
+            this.lbl_AvisoNome.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoNome.Location = new System.Drawing.Point(110, 63);
+            this.lbl_AvisoNome.Name = "lbl_AvisoNome";
+            this.lbl_AvisoNome.Size = new System.Drawing.Size(91, 13);
+            this.lbl_AvisoNome.TabIndex = 26;
+            this.lbl_AvisoNome.Text = " Campo inválido...";
+            this.lbl_AvisoNome.Visible = false;
+            // 
+            // lbl_AvisoTelefone
+            // 
+            this.lbl_AvisoTelefone.AutoSize = true;
+            this.lbl_AvisoTelefone.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoTelefone.Location = new System.Drawing.Point(110, 171);
+            this.lbl_AvisoTelefone.Name = "lbl_AvisoTelefone";
+            this.lbl_AvisoTelefone.Size = new System.Drawing.Size(91, 13);
+            this.lbl_AvisoTelefone.TabIndex = 27;
+            this.lbl_AvisoTelefone.Text = " Campo inválido...";
+            this.lbl_AvisoTelefone.Visible = false;
+            // 
+            // lbl_AvisoCelular
+            // 
+            this.lbl_AvisoCelular.AutoSize = true;
+            this.lbl_AvisoCelular.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoCelular.Location = new System.Drawing.Point(110, 223);
+            this.lbl_AvisoCelular.Name = "lbl_AvisoCelular";
+            this.lbl_AvisoCelular.Size = new System.Drawing.Size(91, 13);
+            this.lbl_AvisoCelular.TabIndex = 28;
+            this.lbl_AvisoCelular.Text = " Campo inválido...";
+            this.lbl_AvisoCelular.Visible = false;
+            // 
             // f_CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +230,7 @@
             this.Name = "f_CadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.f_CadastroCliente_Load);
             this.pn_MenuCadastroCliente.ResumeLayout(false);
             this.pn_MenuCadastroCliente.PerformLayout();
             this.pn_CadastroCliente.ResumeLayout(false);
@@ -213,5 +253,8 @@
         private System.Windows.Forms.MaskedTextBox txt_TelefoneCliente;
         private System.Windows.Forms.TextBox txt_EnderecoCliente;
         private System.Windows.Forms.TextBox txt_NomeCliente;
+        private System.Windows.Forms.Label lbl_AvisoCelular;
+        private System.Windows.Forms.Label lbl_AvisoTelefone;
+        private System.Windows.Forms.Label lbl_AvisoNome;
     }
 }

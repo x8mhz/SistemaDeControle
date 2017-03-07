@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenciamento
 {
+    // CLASS PARA CONTAR A QUANTIDADE DE LINHAS DAS TABELAS, PARA SABER O CÓDIGO ATUAL DE ENTRADA, CLIENTE E PRODUTO.
     class c_ContadorBanco
     {
         public static int ContadorEntrada()

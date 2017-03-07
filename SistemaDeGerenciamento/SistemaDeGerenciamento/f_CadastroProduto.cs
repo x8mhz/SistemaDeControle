@@ -22,10 +22,12 @@ namespace SistemaDeGerenciamento
          
             if (!c_ValidarProduto.ValidarProduto(txt_Produto.Text).Equals(true))
             {
-
+                lbl_AvisoProduto.Visible = true;
             }
             else
             {
+                lbl_AvisoProduto.Visible = false;
+
                 if (!c_ValidarProduto.ValidarProduto(txt_Marca.Text).Equals(true))
                 {
 

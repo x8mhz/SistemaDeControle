@@ -17,32 +17,39 @@ namespace SistemaDeGerenciamento
             InitializeComponent();
         }
 
+        // VERIFICA E SALVA O CLIENTE CADASTRADO NO BANCO DE DADOS
         private void btn_SalvarCliente_Click(object sender, EventArgs e)
         {
             if (!c_ValidarCliente.ValidarNomeCliente(txt_NomeCliente.Text).Equals(true))
             {
-                MessageBox.Show("ERRO: 1");
+                lbl_AvisoNome.Visible = true;
             }
             else
             {
+                lbl_AvisoNome.Visible = false;
+
                 if (!c_ValidarCliente.ValidarEnderecoCliente(txt_EnderecoCliente.Text).Equals(true))
                 {
-                    MessageBox.Show("ERRO: 2");
+                    
                 }
                 else
                 {
                     if (!c_ValidarCliente.ValidarTelefone(txt_TelefoneCliente.Text).Equals(true))
                     {
-                        MessageBox.Show("ERRO: 3");
+                        lbl_AvisoTelefone.Visible = true;
                     }
                     else
                     {
+                        lbl_AvisoCelular.Visible = false;
+
                         if (!c_ValidarCliente.ValidarTelefone(txt_CelularCliente.Text).Equals(true))
                         {
-                            MessageBox.Show("ERRO: 4");
+                            lbl_AvisoCelular.Visible = true;
                         }
                         else
-                        {                         
+                        {
+                            lbl_AvisoCelular.Visible = false;
+                                                  
                             // ENVIAR PARA O BANCO DE CLIENTE
                             c_EnviarClienteBanco cliente = new c_EnviarClienteBanco(c_ContadorBanco.ContadorCliente(), txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);
                             cliente.EnviarClienteBanco();
@@ -52,6 +59,11 @@ namespace SistemaDeGerenciamento
                     }
                 }
             }
+        }
+
+        private void f_CadastroCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

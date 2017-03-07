@@ -39,6 +39,7 @@
             this.txt_Modelo = new System.Windows.Forms.TextBox();
             this.txt_Marca = new System.Windows.Forms.TextBox();
             this.txt_Produto = new System.Windows.Forms.TextBox();
+            this.lbl_AvisoProduto = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +88,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lbl_AvisoProduto);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -155,6 +157,17 @@
             this.txt_Produto.Size = new System.Drawing.Size(552, 26);
             this.txt_Produto.TabIndex = 0;
             // 
+            // lbl_AvisoProduto
+            // 
+            this.lbl_AvisoProduto.AutoSize = true;
+            this.lbl_AvisoProduto.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoProduto.Location = new System.Drawing.Point(108, 64);
+            this.lbl_AvisoProduto.Name = "lbl_AvisoProduto";
+            this.lbl_AvisoProduto.Size = new System.Drawing.Size(104, 13);
+            this.lbl_AvisoProduto.TabIndex = 24;
+            this.lbl_AvisoProduto.Text = " Campo obrigatório...";
+            this.lbl_AvisoProduto.Visible = false;
+            // 
             // f_CadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +202,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Label lbl_AvisoProduto;
     }
 }

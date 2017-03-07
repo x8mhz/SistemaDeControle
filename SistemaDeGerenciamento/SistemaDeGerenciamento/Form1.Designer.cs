@@ -40,8 +40,18 @@
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Novo = new System.Windows.Forms.Button();
             this.pn_Entrada = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lbl_AvisoPago = new System.Windows.Forms.Label();
+            this.lbl_AvisoValor = new System.Windows.Forms.Label();
+            this.lbl_AvisoSaida = new System.Windows.Forms.Label();
+            this.lbl_AvisoEntrada = new System.Windows.Forms.Label();
+            this.lbl_AvisoProduto = new System.Windows.Forms.Label();
+            this.lbl_AvisoCliente = new System.Windows.Forms.Label();
             this.txt_DataEntrada = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_Cliente = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_AddCliente = new System.Windows.Forms.Button();
             this.pn_PagoOuNao = new System.Windows.Forms.Panel();
             this.check_PagoSim = new System.Windows.Forms.CheckBox();
             this.check_PagoNao = new System.Windows.Forms.CheckBox();
@@ -92,16 +102,6 @@
             this.tb_EntradaTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_EntradaTableAdapter();
             this.tb_ClienteTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_ClienteTableAdapter();
             this.tb_ProdutoTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_ProdutoTableAdapter();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_Cliente = new System.Windows.Forms.ComboBox();
-            this.btn_AddCliente = new System.Windows.Forms.Button();
-            this.lbl_AvisoCliente = new System.Windows.Forms.Label();
-            this.lbl_AvisoProduto = new System.Windows.Forms.Label();
-            this.lbl_AvisoEntrada = new System.Windows.Forms.Label();
-            this.lbl_AvisoSaida = new System.Windows.Forms.Label();
-            this.lbl_AvisoValor = new System.Windows.Forms.Label();
-            this.lbl_AvisoPago = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.pn_Menu.SuspendLayout();
             this.pn_Entrada.SuspendLayout();
             this.pn_PagoOuNao.SuspendLayout();
@@ -300,8 +300,84 @@
             this.pn_Entrada.Controls.Add(this.txt_DataSaida);
             this.pn_Entrada.Location = new System.Drawing.Point(-8, 117);
             this.pn_Entrada.Name = "pn_Entrada";
-            this.pn_Entrada.Size = new System.Drawing.Size(486, 536);
+            this.pn_Entrada.Size = new System.Drawing.Size(486, 372);
             this.pn_Entrada.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.IndianRed;
+            this.label16.Location = new System.Drawing.Point(101, 521);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(0, 13);
+            this.label16.TabIndex = 29;
+            this.label16.Visible = false;
+            // 
+            // lbl_AvisoPago
+            // 
+            this.lbl_AvisoPago.AutoSize = true;
+            this.lbl_AvisoPago.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoPago.Location = new System.Drawing.Point(102, 380);
+            this.lbl_AvisoPago.Name = "lbl_AvisoPago";
+            this.lbl_AvisoPago.Size = new System.Drawing.Size(109, 13);
+            this.lbl_AvisoPago.TabIndex = 28;
+            this.lbl_AvisoPago.Text = " Escolha obrigatória...";
+            this.lbl_AvisoPago.Visible = false;
+            // 
+            // lbl_AvisoValor
+            // 
+            this.lbl_AvisoValor.AutoSize = true;
+            this.lbl_AvisoValor.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoValor.Location = new System.Drawing.Point(102, 314);
+            this.lbl_AvisoValor.Name = "lbl_AvisoValor";
+            this.lbl_AvisoValor.Size = new System.Drawing.Size(91, 13);
+            this.lbl_AvisoValor.TabIndex = 27;
+            this.lbl_AvisoValor.Text = " Campo inválido...";
+            this.lbl_AvisoValor.Visible = false;
+            // 
+            // lbl_AvisoSaida
+            // 
+            this.lbl_AvisoSaida.AutoSize = true;
+            this.lbl_AvisoSaida.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoSaida.Location = new System.Drawing.Point(102, 266);
+            this.lbl_AvisoSaida.Name = "lbl_AvisoSaida";
+            this.lbl_AvisoSaida.Size = new System.Drawing.Size(91, 13);
+            this.lbl_AvisoSaida.TabIndex = 26;
+            this.lbl_AvisoSaida.Text = " Campo inválido...";
+            this.lbl_AvisoSaida.Visible = false;
+            // 
+            // lbl_AvisoEntrada
+            // 
+            this.lbl_AvisoEntrada.AutoSize = true;
+            this.lbl_AvisoEntrada.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoEntrada.Location = new System.Drawing.Point(102, 215);
+            this.lbl_AvisoEntrada.Name = "lbl_AvisoEntrada";
+            this.lbl_AvisoEntrada.Size = new System.Drawing.Size(91, 13);
+            this.lbl_AvisoEntrada.TabIndex = 25;
+            this.lbl_AvisoEntrada.Text = " Campo inválido...";
+            this.lbl_AvisoEntrada.Visible = false;
+            // 
+            // lbl_AvisoProduto
+            // 
+            this.lbl_AvisoProduto.AutoSize = true;
+            this.lbl_AvisoProduto.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoProduto.Location = new System.Drawing.Point(101, 166);
+            this.lbl_AvisoProduto.Name = "lbl_AvisoProduto";
+            this.lbl_AvisoProduto.Size = new System.Drawing.Size(104, 13);
+            this.lbl_AvisoProduto.TabIndex = 24;
+            this.lbl_AvisoProduto.Text = " Campo obrigatório...";
+            this.lbl_AvisoProduto.Visible = false;
+            // 
+            // lbl_AvisoCliente
+            // 
+            this.lbl_AvisoCliente.AutoSize = true;
+            this.lbl_AvisoCliente.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_AvisoCliente.Location = new System.Drawing.Point(101, 113);
+            this.lbl_AvisoCliente.Name = "lbl_AvisoCliente";
+            this.lbl_AvisoCliente.Size = new System.Drawing.Size(104, 13);
+            this.lbl_AvisoCliente.TabIndex = 23;
+            this.lbl_AvisoCliente.Text = " Campo obrigatório...";
+            this.lbl_AvisoCliente.Visible = false;
             // 
             // txt_DataEntrada
             // 
@@ -313,6 +389,26 @@
             this.txt_DataEntrada.TabIndex = 21;
             this.txt_DataEntrada.ValidatingType = typeof(System.DateTime);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(20, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Cliente:";
+            // 
+            // txt_Cliente
+            // 
+            this.txt_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cliente.FormattingEnabled = true;
+            this.txt_Cliente.Location = new System.Drawing.Point(105, 82);
+            this.txt_Cliente.Name = "txt_Cliente";
+            this.txt_Cliente.Size = new System.Drawing.Size(293, 28);
+            this.txt_Cliente.TabIndex = 18;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -323,6 +419,23 @@
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 7;
             this.label8.Text = "Pago:";
+            // 
+            // btn_AddCliente
+            // 
+            this.btn_AddCliente.BackColor = System.Drawing.Color.White;
+            this.btn_AddCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_AddCliente.BackgroundImage")));
+            this.btn_AddCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_AddCliente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_AddCliente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_AddCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btn_AddCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_AddCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddCliente.Location = new System.Drawing.Point(423, 82);
+            this.btn_AddCliente.Name = "btn_AddCliente";
+            this.btn_AddCliente.Size = new System.Drawing.Size(45, 28);
+            this.btn_AddCliente.TabIndex = 20;
+            this.btn_AddCliente.UseVisualStyleBackColor = false;
+            this.btn_AddCliente.Click += new System.EventHandler(this.btn_AddCliente_Click);
             // 
             // pn_PagoOuNao
             // 
@@ -350,6 +463,8 @@
             // check_PagoNao
             // 
             this.check_PagoNao.AutoSize = true;
+            this.check_PagoNao.Checked = true;
+            this.check_PagoNao.CheckState = System.Windows.Forms.CheckState.Checked;
             this.check_PagoNao.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_PagoNao.ForeColor = System.Drawing.Color.IndianRed;
             this.check_PagoNao.Location = new System.Drawing.Point(37, 9);
@@ -445,7 +560,11 @@
             this.txt_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Produto.FormattingEnabled = true;
             this.txt_Produto.Items.AddRange(new object[] {
-            "Computador, SEMMARCA, MAXTRO"});
+            "COMPUTADOR",
+            "NOTEBOOK",
+            "MONITOR",
+            "TABLET",
+            "GPS"});
             this.txt_Produto.Location = new System.Drawing.Point(104, 135);
             this.txt_Produto.Name = "txt_Produto";
             this.txt_Produto.Size = new System.Drawing.Size(293, 28);
@@ -478,7 +597,7 @@
             this.txt_Defeito.Location = new System.Drawing.Point(105, 401);
             this.txt_Defeito.Multiline = true;
             this.txt_Defeito.Name = "txt_Defeito";
-            this.txt_Defeito.Size = new System.Drawing.Size(363, 117);
+            this.txt_Defeito.Size = new System.Drawing.Size(363, 0);
             this.txt_Defeito.TabIndex = 14;
             // 
             // txt_DataSaida
@@ -500,7 +619,7 @@
             this.pn_TabControle.Controls.Add(this.tab_Controle);
             this.pn_TabControle.Location = new System.Drawing.Point(475, 117);
             this.pn_TabControle.Name = "pn_TabControle";
-            this.pn_TabControle.Size = new System.Drawing.Size(788, 536);
+            this.pn_TabControle.Size = new System.Drawing.Size(788, 372);
             this.pn_TabControle.TabIndex = 2;
             // 
             // tab_Controle
@@ -516,7 +635,7 @@
             this.tab_Controle.Name = "tab_Controle";
             this.tab_Controle.Padding = new System.Drawing.Point(50, 5);
             this.tab_Controle.SelectedIndex = 0;
-            this.tab_Controle.Size = new System.Drawing.Size(779, 514);
+            this.tab_Controle.Size = new System.Drawing.Size(779, 350);
             this.tab_Controle.TabIndex = 0;
             this.tab_Controle.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tab_Controle_MouseClick);
             // 
@@ -529,7 +648,7 @@
             this.tabProduto.Location = new System.Drawing.Point(4, 33);
             this.tabProduto.Name = "tabProduto";
             this.tabProduto.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProduto.Size = new System.Drawing.Size(771, 477);
+            this.tabProduto.Size = new System.Drawing.Size(771, 313);
             this.tabProduto.TabIndex = 1;
             this.tabProduto.Text = "      Entrada";
             this.tabProduto.UseVisualStyleBackColor = true;
@@ -557,7 +676,7 @@
             this.grid_Entrada.DataSource = this.tbEntradaBindingSource;
             this.grid_Entrada.Location = new System.Drawing.Point(3, 3);
             this.grid_Entrada.Name = "grid_Entrada";
-            this.grid_Entrada.Size = new System.Drawing.Size(765, 471);
+            this.grid_Entrada.Size = new System.Drawing.Size(765, 307);
             this.grid_Entrada.TabIndex = 0;
             // 
             // codEntradaDataGridViewTextBoxColumn
@@ -653,7 +772,7 @@
             this.grid_Cliente.Name = "grid_Cliente";
             this.grid_Cliente.Size = new System.Drawing.Size(765, 471);
             this.grid_Cliente.TabIndex = 0;
-            this.grid_Cliente.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_Cliente_MouseDoubleClick);
+            this.grid_Cliente.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_Cliente_RowHeaderMouseClick);
             // 
             // codClienteDataGridViewTextBoxColumn
             // 
@@ -722,6 +841,7 @@
             this.grid_Produto.Name = "grid_Produto";
             this.grid_Produto.Size = new System.Drawing.Size(765, 471);
             this.grid_Produto.TabIndex = 0;
+            this.grid_Produto.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_Produto_RowHeaderMouseClick);
             // 
             // codProdutoDataGridViewTextBoxColumn
             // 
@@ -757,7 +877,7 @@
             this.toolStrip_Rodape.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip_Rodape.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbl_DataHoraAtual});
-            this.toolStrip_Rodape.Location = new System.Drawing.Point(0, 656);
+            this.toolStrip_Rodape.Location = new System.Drawing.Point(0, 492);
             this.toolStrip_Rodape.Name = "toolStrip_Rodape";
             this.toolStrip_Rodape.Size = new System.Drawing.Size(1257, 25);
             this.toolStrip_Rodape.TabIndex = 3;
@@ -774,7 +894,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 681);
+            this.panel1.Size = new System.Drawing.Size(1257, 517);
             this.panel1.TabIndex = 5;
             // 
             // tb_EntradaTableAdapter
@@ -789,127 +909,12 @@
             // 
             this.tb_ProdutoTableAdapter.ClearBeforeFill = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(20, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cliente:";
-            // 
-            // txt_Cliente
-            // 
-            this.txt_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cliente.FormattingEnabled = true;
-            this.txt_Cliente.Items.AddRange(new object[] {
-            "Fabricio Ramos, Rua General, 33730026"});
-            this.txt_Cliente.Location = new System.Drawing.Point(105, 82);
-            this.txt_Cliente.Name = "txt_Cliente";
-            this.txt_Cliente.Size = new System.Drawing.Size(293, 28);
-            this.txt_Cliente.TabIndex = 18;
-            // 
-            // btn_AddCliente
-            // 
-            this.btn_AddCliente.BackColor = System.Drawing.Color.White;
-            this.btn_AddCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_AddCliente.BackgroundImage")));
-            this.btn_AddCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_AddCliente.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_AddCliente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_AddCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btn_AddCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_AddCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddCliente.Location = new System.Drawing.Point(423, 82);
-            this.btn_AddCliente.Name = "btn_AddCliente";
-            this.btn_AddCliente.Size = new System.Drawing.Size(45, 28);
-            this.btn_AddCliente.TabIndex = 20;
-            this.btn_AddCliente.UseVisualStyleBackColor = false;
-            this.btn_AddCliente.Click += new System.EventHandler(this.btn_AddCliente_Click);
-            // 
-            // lbl_AvisoCliente
-            // 
-            this.lbl_AvisoCliente.AutoSize = true;
-            this.lbl_AvisoCliente.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_AvisoCliente.Location = new System.Drawing.Point(101, 113);
-            this.lbl_AvisoCliente.Name = "lbl_AvisoCliente";
-            this.lbl_AvisoCliente.Size = new System.Drawing.Size(104, 13);
-            this.lbl_AvisoCliente.TabIndex = 23;
-            this.lbl_AvisoCliente.Text = " Campo obrigatório...";
-            this.lbl_AvisoCliente.Visible = false;
-            // 
-            // lbl_AvisoProduto
-            // 
-            this.lbl_AvisoProduto.AutoSize = true;
-            this.lbl_AvisoProduto.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_AvisoProduto.Location = new System.Drawing.Point(101, 166);
-            this.lbl_AvisoProduto.Name = "lbl_AvisoProduto";
-            this.lbl_AvisoProduto.Size = new System.Drawing.Size(104, 13);
-            this.lbl_AvisoProduto.TabIndex = 24;
-            this.lbl_AvisoProduto.Text = " Campo obrigatório...";
-            this.lbl_AvisoProduto.Visible = false;
-            // 
-            // lbl_AvisoEntrada
-            // 
-            this.lbl_AvisoEntrada.AutoSize = true;
-            this.lbl_AvisoEntrada.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_AvisoEntrada.Location = new System.Drawing.Point(102, 215);
-            this.lbl_AvisoEntrada.Name = "lbl_AvisoEntrada";
-            this.lbl_AvisoEntrada.Size = new System.Drawing.Size(91, 13);
-            this.lbl_AvisoEntrada.TabIndex = 25;
-            this.lbl_AvisoEntrada.Text = " Campo inválido...";
-            this.lbl_AvisoEntrada.Visible = false;
-            // 
-            // lbl_AvisoSaida
-            // 
-            this.lbl_AvisoSaida.AutoSize = true;
-            this.lbl_AvisoSaida.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_AvisoSaida.Location = new System.Drawing.Point(102, 266);
-            this.lbl_AvisoSaida.Name = "lbl_AvisoSaida";
-            this.lbl_AvisoSaida.Size = new System.Drawing.Size(91, 13);
-            this.lbl_AvisoSaida.TabIndex = 26;
-            this.lbl_AvisoSaida.Text = " Campo inválido...";
-            this.lbl_AvisoSaida.Visible = false;
-            // 
-            // lbl_AvisoValor
-            // 
-            this.lbl_AvisoValor.AutoSize = true;
-            this.lbl_AvisoValor.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_AvisoValor.Location = new System.Drawing.Point(102, 314);
-            this.lbl_AvisoValor.Name = "lbl_AvisoValor";
-            this.lbl_AvisoValor.Size = new System.Drawing.Size(91, 13);
-            this.lbl_AvisoValor.TabIndex = 27;
-            this.lbl_AvisoValor.Text = " Campo inválido...";
-            this.lbl_AvisoValor.Visible = false;
-            // 
-            // lbl_AvisoPago
-            // 
-            this.lbl_AvisoPago.AutoSize = true;
-            this.lbl_AvisoPago.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_AvisoPago.Location = new System.Drawing.Point(102, 380);
-            this.lbl_AvisoPago.Name = "lbl_AvisoPago";
-            this.lbl_AvisoPago.Size = new System.Drawing.Size(109, 13);
-            this.lbl_AvisoPago.TabIndex = 28;
-            this.lbl_AvisoPago.Text = " Escolha obrigatória...";
-            this.lbl_AvisoPago.Visible = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.IndianRed;
-            this.label16.Location = new System.Drawing.Point(101, 521);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(0, 13);
-            this.label16.TabIndex = 29;
-            this.label16.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1257, 681);
+            this.ClientSize = new System.Drawing.Size(1257, 517);
             this.Controls.Add(this.toolStrip_Rodape);
             this.Controls.Add(this.pn_Entrada);
             this.Controls.Add(this.pn_Menu);
