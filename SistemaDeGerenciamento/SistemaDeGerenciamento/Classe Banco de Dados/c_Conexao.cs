@@ -44,6 +44,26 @@ namespace SistemaDeGerenciamento
             }               
         }
 
+        public string LeitorCliente()
+        {
+            dr = cmd.ExecuteReader();
+            if(dr.Read())
+            {
+                return "Produto: " + dr.GetString(1) + " Marca: " + dr.GetString(2) + " Modelo: " + dr.GetString(3);               
+            }
+            return dr.GetString(-1);
+        }
+
+        public string LeitorProduto()
+        {
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                return "Nome: " + dr.GetString(1) + " Telefone: " + dr.GetString(2) + " Celular: " + dr.GetString(3);
+            }
+            return dr.GetString(-1);
+        }
+
         public void FecharConexao()
         {
             con.Close();

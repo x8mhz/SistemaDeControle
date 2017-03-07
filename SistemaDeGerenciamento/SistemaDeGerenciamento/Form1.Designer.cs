@@ -367,6 +367,7 @@
             this.txt_Cliente.Name = "txt_Cliente";
             this.txt_Cliente.Size = new System.Drawing.Size(293, 28);
             this.txt_Cliente.TabIndex = 18;
+            this.txt_Cliente.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_Cliente_MouseClick);
             // 
             // label5
             // 
@@ -431,6 +432,7 @@
             this.txt_Produto.Name = "txt_Produto";
             this.txt_Produto.Size = new System.Drawing.Size(293, 28);
             this.txt_Produto.TabIndex = 17;
+            this.txt_Produto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_Produto_MouseClick);
             // 
             // label3
             // 

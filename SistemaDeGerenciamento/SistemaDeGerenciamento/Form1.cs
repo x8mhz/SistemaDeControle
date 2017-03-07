@@ -104,5 +104,20 @@ namespace SistemaDeGerenciamento
             f_CadastroProduto cadastro_Produto = new f_CadastroProduto();
             cadastro_Produto.Visible = true;
         }
+
+        private void txt_Cliente_MouseClick(object sender, MouseEventArgs e)
+        {
+            c_Conexao con = new c_Conexao();
+            con.CommandText("SELECT codCliente, nome, telefone, celular FROM tb_Cliente WHERE codCliente = (SELECT MAX(codCliente) FROM tb_Cliente)");
+            txt_Cliente.Items.Add(con.LeitorCliente());
+
+        }
+
+        private void txt_Produto_MouseClick(object sender, MouseEventArgs e)
+        {
+            c_Conexao con = new c_Conexao();
+            con.CommandText("SELECT codProduto, produto, marca, modelo FROM tb_Produto WHERE codProduto = (SELECT MAX(codProduto) FROM tb_Produto)");
+            txt_Produto.Items.Add(con.LeitorProduto());
+        }
     }
 }
