@@ -12,21 +12,21 @@ namespace SistemaDeGerenciamento
         {
             c_Conexao con = new c_Conexao();
             con.CommandText(@"SELECT COUNT(*) FROM tb_Entrada");
-            return 1 + con.Contador();
+            return con.Contador();
         }
 
         public static int ContadorCliente()
         {
             c_Conexao con = new c_Conexao();
             con.CommandText(@"SELECT COUNT(*) FROM tb_Cliente");
-            return 1 + con.Contador();
+            return con.Contador();
         }
 
         public static int ContadorProduto()
         {
             c_Conexao con = new c_Conexao();
             con.CommandText(@"SELECT COUNT(*) FROM tb_Cliente");
-            return 1 + con.Contador();
+            return con.Contador();
         }
     }
 }
