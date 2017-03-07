@@ -99,8 +99,15 @@ namespace SistemaDeGerenciamento
                                         // ENVIA OS DADOS DE CADASTRO PARA O BANCO DE 
                                         c_EnviarEntradaBanco Enviar = new c_EnviarEntradaBanco(c_ContadorBanco.ContadorEntrada(),txt_Produto.Text, txt_Cliente.Text, txt_DataEntrada.Text, txt_DataSaida.Text, Convert.ToDecimal(txt_Valor.Text), check_Pago, txt_Defeito.Text);
                                         Enviar.EnviarEntradaBanco();
+
                                         MessageBox.Show("Salvo com sucesso!", "Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        
+                                        // ATUALIZA A GRID DE ENTRAD
                                         this.tb_EntradaTableAdapter.Fill(this.bD_SistemaGerenciamentoDataSet.tb_Entrada);
+                                        
+                                        //JOGAR OS ATUAIS CLIENTE E PRODUTO DENTRO DO COMBOBOX
+                                        txt_Cliente.Items.Add(txt_Cliente.Text);
+                                        txt_Produto.Items.Add(txt_Produto.Text);
                                     }
                                 }
                             }
