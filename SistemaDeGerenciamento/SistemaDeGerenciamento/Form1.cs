@@ -108,6 +108,7 @@ namespace SistemaDeGerenciamento
                                         //JOGAR OS ATUAIS CLIENTE E PRODUTO DENTRO DO COMBOBOX
                                         txt_Cliente.Items.Add(txt_Cliente.Text);
                                         txt_Produto.Items.Add(txt_Produto.Text);
+
                                     }
                                 }
                             }
@@ -171,6 +172,8 @@ namespace SistemaDeGerenciamento
 
         private void btn_Novo_Click(object sender, EventArgs e)
         {
+            txt_Cliente.Text = "";
+            txt_Produto.Text = "";
             txt_DataEntrada.Text = Convert.ToString(DateTime.Now);
             txt_DataSaida.Clear();
             txt_Valor.Clear();
