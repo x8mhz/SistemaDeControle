@@ -44,7 +44,8 @@ namespace SistemaDeGerenciamento
                         else
                         {                         
                             // ENVIAR PARA O BANCO DE CLIENTE
-                            c_EnviarClienteBanco cliente = new c_EnviarClienteBanco(c_ContadorBanco.ContadorCliente(), txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);    
+                            c_EnviarClienteBanco cliente = new c_EnviarClienteBanco(c_ContadorBanco.ContadorCliente(), txt_NomeCliente.Text, txt_EnderecoCliente.Text, txt_TelefoneCliente.Text, txt_CelularCliente.Text);
+                            cliente.EnviarClienteBanco();
                         }
                     }
                 }

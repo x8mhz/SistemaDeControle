@@ -13,7 +13,6 @@ namespace SistemaDeGerenciamento
         public string EnderecoCliente { get; set; }
         public string TelefoneCliente { get; set; }
         public string CelularCliente { get; set; }
-
-
     }
+
 }

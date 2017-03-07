@@ -23,13 +23,13 @@ namespace SistemaDeGerenciamento
             // HORA ATUAL DA DATA DE ENTRADA E RODAPÉ
             txt_DataEntrada.Text = lbl_DataHoraAtual.Text = Convert.ToString(DateTime.Now);
             // CONTADOR DE USUÁRIOS
-            txt_Codigo.Text =  Convert.ToString(c_ContadorBanco.ContadorEntrada());                   
+            txt_Codigo.Text =  Convert.ToString(c_ContadorBanco.ContadorEntrada());                                     
         }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            string checa_Pago;   
-
+            string checa_Pago;
+          
             if (!c_ValidarEntrada.ValidarProduto(txt_Produto.Text).Equals(true))
             {
                 MessageBox.Show("ERRO1");
