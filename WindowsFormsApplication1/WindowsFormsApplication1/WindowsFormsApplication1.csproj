@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D7B333ED-0E91-4CC4-9029-0551DE4C752A}</ProjectGuid>
+    <ProjectGuid>{11614613-EA72-4557-9967-BD299062D7DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SistemaDeGerenciamento</RootNamespace>
-    <AssemblyName>SistemaDeGerenciamento</AssemblyName>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,53 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BD_SistemaGerenciamentoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD_SistemaGerenciamentoDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Classe Banco de Dados\c_Conexao.cs" />
-    <Compile Include="Classe Banco de Dados\c_ContadorBanco.cs" />
-    <Compile Include="Classe Banco de Dados\c_EnviarClienteBanco.cs" />
-    <Compile Include="Classe Banco de Dados\c_EnviarEntradaBanco.cs" />
-    <Compile Include="Classe Banco de Dados\c_EnviarProdutoBanco.cs" />
-    <Compile Include="Classe Banco de Dados\c_PesquisaBanco.cs" />
-    <Compile Include="Classe de Validações\c_ValidarCliente.cs" />
-    <Compile Include="Classe de Validações\c_ValidarPesquisa.cs" />
-    <Compile Include="Classe de Validações\c_ValidarProduto.cs" />
-    <Compile Include="Classes de Atributos\c_Cliente.cs" />
-    <Compile Include="Classes de Atributos\c_Entrada.cs" />
-    <Compile Include="Classes de Atributos\c_Produto.cs" />
-    <Compile Include="Classe de Validações\c_ValidarEntrada.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="f_CadastroCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f_CadastroCliente.Designer.cs">
-      <DependentUpon>f_CadastroCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="f_CadastroProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f_CadastroProduto.Designer.cs">
-      <DependentUpon>f_CadastroProduto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="f_CadastroCliente.resx">
-      <DependentUpon>f_CadastroCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="f_CadastroProduto.resx">
-      <DependentUpon>f_CadastroProduto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -102,17 +63,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BD_SistemaGerenciamentoDataSet.xsc">
-      <DependentUpon>BD_SistemaGerenciamentoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BD_SistemaGerenciamentoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BD_SistemaGerenciamentoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BD_SistemaGerenciamentoDataSet.xss">
-      <DependentUpon>BD_SistemaGerenciamentoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

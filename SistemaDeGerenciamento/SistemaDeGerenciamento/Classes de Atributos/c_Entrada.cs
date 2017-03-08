@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenciamento
 {
-    class c_Entrada
+    abstract class c_Entrada
     {
         public int CodigoEntrada { get; set; }
         public string ProdutoEntrada { get; set; }

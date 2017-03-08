@@ -199,8 +199,36 @@ namespace SistemaDeGerenciamento
         {
             check_PagoNao.Checked = false;
         }
-        //-------------------------------------------------------------------------
+
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
 
+        string pesquisa = null;
+        //CONFIGURAÇÃO DO TEXTEBOX DE PESQUISA.
+        private void txt_Pesquisar_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_Pesquisar.Text = null;
+        }
+
+        private void txt_Pesquisar_Leave(object sender, EventArgs e)
+        {
+            pesquisa = txt_Pesquisar.Text;
+            txt_Pesquisar.Text = " Digite Código ou o Nome do Cliente...";            
+        }
+
+
+
+        // CONFIGURAÇÃO DO BOTÃO DE PESQUISA
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+            c_PesquisaBanco pesquisa = new c_PesquisaBanco();
+            c_Conexao con = new c_Conexao();
+           
+            grid_Entrada.DataSource = pesquisa.Pesquisar(txt_Pesquisar.Text);
+           
+        }
     }
 }

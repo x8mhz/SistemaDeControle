@@ -71,20 +71,6 @@
             this.tab_Controle = new System.Windows.Forms.TabControl();
             this.tabProduto = new System.Windows.Forms.TabPage();
             this.grid_Entrada = new System.Windows.Forms.DataGridView();
-            this.tbEntradaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bD_SistemaGerenciamentoDataSet = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSet();
-            this.tabCliente = new System.Windows.Forms.TabPage();
-            this.grid_Cliente = new System.Windows.Forms.DataGridView();
-            this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabEntrada = new System.Windows.Forms.TabPage();
-            this.grid_Produto = new System.Windows.Forms.DataGridView();
-            this.tbProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStrip_Rodape = new System.Windows.Forms.ToolStrip();
-            this.lbl_DataHoraAtual = new System.Windows.Forms.ToolStripLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tb_EntradaTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_EntradaTableAdapter();
-            this.tb_ClienteTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_ClienteTableAdapter();
-            this.tb_ProdutoTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_ProdutoTableAdapter();
             this.codEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,15 +79,29 @@
             this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.defeitoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbEntradaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bD_SistemaGerenciamentoDataSet = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSet();
+            this.tabCliente = new System.Windows.Forms.TabPage();
+            this.grid_Cliente = new System.Windows.Forms.DataGridView();
             this.codClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabEntrada = new System.Windows.Forms.TabPage();
+            this.grid_Produto = new System.Windows.Forms.DataGridView();
             this.codProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStrip_Rodape = new System.Windows.Forms.ToolStrip();
+            this.lbl_DataHoraAtual = new System.Windows.Forms.ToolStripLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tb_EntradaTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_EntradaTableAdapter();
+            this.tb_ClienteTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_ClienteTableAdapter();
+            this.tb_ProdutoTableAdapter = new SistemaDeGerenciamento.BD_SistemaGerenciamentoDataSetTableAdapters.tb_ProdutoTableAdapter();
             this.pn_Menu.SuspendLayout();
             this.pn_Entrada.SuspendLayout();
             this.pn_PagoOuNao.SuspendLayout();
@@ -184,6 +184,7 @@
             this.btn_Pesquisar.Text = "Pesquisar";
             this.btn_Pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
             // txt_Pesquisar
             // 
@@ -194,6 +195,8 @@
             this.txt_Pesquisar.Size = new System.Drawing.Size(337, 26);
             this.txt_Pesquisar.TabIndex = 4;
             this.txt_Pesquisar.Text = " Digite Código ou o Nome do Cliente...";
+            this.txt_Pesquisar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_Pesquisar_MouseClick);
+            this.txt_Pesquisar.Leave += new System.EventHandler(this.txt_Pesquisar_Leave);
             // 
             // btn_Sair
             // 
@@ -212,6 +215,7 @@
             this.btn_Sair.Text = "Sair";
             this.btn_Sair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // btn_Excluir
             // 
@@ -682,134 +686,6 @@
             this.grid_Entrada.Size = new System.Drawing.Size(765, 475);
             this.grid_Entrada.TabIndex = 0;
             // 
-            // tbEntradaBindingSource
-            // 
-            this.tbEntradaBindingSource.DataMember = "tb_Entrada";
-            this.tbEntradaBindingSource.DataSource = this.bD_SistemaGerenciamentoDataSet;
-            // 
-            // bD_SistemaGerenciamentoDataSet
-            // 
-            this.bD_SistemaGerenciamentoDataSet.DataSetName = "BD_SistemaGerenciamentoDataSet";
-            this.bD_SistemaGerenciamentoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tabCliente
-            // 
-            this.tabCliente.Controls.Add(this.grid_Cliente);
-            this.tabCliente.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabCliente.ForeColor = System.Drawing.Color.Gray;
-            this.tabCliente.Location = new System.Drawing.Point(4, 33);
-            this.tabCliente.Name = "tabCliente";
-            this.tabCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCliente.Size = new System.Drawing.Size(771, 481);
-            this.tabCliente.TabIndex = 0;
-            this.tabCliente.Text = "      Cliente";
-            this.tabCliente.UseVisualStyleBackColor = true;
-            // 
-            // grid_Cliente
-            // 
-            this.grid_Cliente.AllowUserToAddRows = false;
-            this.grid_Cliente.AllowUserToDeleteRows = false;
-            this.grid_Cliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grid_Cliente.AutoGenerateColumns = false;
-            this.grid_Cliente.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.grid_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grid_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_Cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codClienteDataGridViewTextBoxColumn,
-            this.nomeDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn,
-            this.telefoneDataGridViewTextBoxColumn,
-            this.celularDataGridViewTextBoxColumn});
-            this.grid_Cliente.DataSource = this.tbClienteBindingSource;
-            this.grid_Cliente.Location = new System.Drawing.Point(3, 3);
-            this.grid_Cliente.Name = "grid_Cliente";
-            this.grid_Cliente.Size = new System.Drawing.Size(765, 471);
-            this.grid_Cliente.TabIndex = 0;
-            this.grid_Cliente.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_Cliente_RowHeaderMouseClick);
-            // 
-            // tbClienteBindingSource
-            // 
-            this.tbClienteBindingSource.DataMember = "tb_Cliente";
-            this.tbClienteBindingSource.DataSource = this.bD_SistemaGerenciamentoDataSet;
-            // 
-            // tabEntrada
-            // 
-            this.tabEntrada.Controls.Add(this.grid_Produto);
-            this.tabEntrada.ForeColor = System.Drawing.Color.Gray;
-            this.tabEntrada.Location = new System.Drawing.Point(4, 33);
-            this.tabEntrada.Name = "tabEntrada";
-            this.tabEntrada.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEntrada.Size = new System.Drawing.Size(771, 481);
-            this.tabEntrada.TabIndex = 2;
-            this.tabEntrada.Text = "Produto";
-            this.tabEntrada.UseVisualStyleBackColor = true;
-            // 
-            // grid_Produto
-            // 
-            this.grid_Produto.AllowUserToAddRows = false;
-            this.grid_Produto.AllowUserToDeleteRows = false;
-            this.grid_Produto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grid_Produto.AutoGenerateColumns = false;
-            this.grid_Produto.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.grid_Produto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_Produto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codProdutoDataGridViewTextBoxColumn,
-            this.produtoDataGridViewTextBoxColumn1,
-            this.marcaDataGridViewTextBoxColumn,
-            this.modeloDataGridViewTextBoxColumn});
-            this.grid_Produto.DataSource = this.tbProdutoBindingSource;
-            this.grid_Produto.Location = new System.Drawing.Point(3, 3);
-            this.grid_Produto.Name = "grid_Produto";
-            this.grid_Produto.Size = new System.Drawing.Size(765, 471);
-            this.grid_Produto.TabIndex = 0;
-            this.grid_Produto.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_Produto_RowHeaderMouseClick);
-            // 
-            // tbProdutoBindingSource
-            // 
-            this.tbProdutoBindingSource.DataMember = "tb_Produto";
-            this.tbProdutoBindingSource.DataSource = this.bD_SistemaGerenciamentoDataSet;
-            // 
-            // toolStrip_Rodape
-            // 
-            this.toolStrip_Rodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip_Rodape.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lbl_DataHoraAtual});
-            this.toolStrip_Rodape.Location = new System.Drawing.Point(0, 665);
-            this.toolStrip_Rodape.Name = "toolStrip_Rodape";
-            this.toolStrip_Rodape.Size = new System.Drawing.Size(1257, 25);
-            this.toolStrip_Rodape.TabIndex = 3;
-            this.toolStrip_Rodape.Text = "toolStrip1";
-            // 
-            // lbl_DataHoraAtual
-            // 
-            this.lbl_DataHoraAtual.Name = "lbl_DataHoraAtual";
-            this.lbl_DataHoraAtual.Size = new System.Drawing.Size(0, 22);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 690);
-            this.panel1.TabIndex = 5;
-            // 
-            // tb_EntradaTableAdapter
-            // 
-            this.tb_EntradaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tb_ClienteTableAdapter
-            // 
-            this.tb_ClienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // tb_ProdutoTableAdapter
-            // 
-            this.tb_ProdutoTableAdapter.ClearBeforeFill = true;
-            // 
             // codEntradaDataGridViewTextBoxColumn
             // 
             this.codEntradaDataGridViewTextBoxColumn.DataPropertyName = "codEntrada";
@@ -858,6 +734,53 @@
             this.defeitoDataGridViewTextBoxColumn.HeaderText = "defeito";
             this.defeitoDataGridViewTextBoxColumn.Name = "defeitoDataGridViewTextBoxColumn";
             // 
+            // tbEntradaBindingSource
+            // 
+            this.tbEntradaBindingSource.DataMember = "tb_Entrada";
+            this.tbEntradaBindingSource.DataSource = this.bD_SistemaGerenciamentoDataSet;
+            // 
+            // bD_SistemaGerenciamentoDataSet
+            // 
+            this.bD_SistemaGerenciamentoDataSet.DataSetName = "BD_SistemaGerenciamentoDataSet";
+            this.bD_SistemaGerenciamentoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabCliente
+            // 
+            this.tabCliente.Controls.Add(this.grid_Cliente);
+            this.tabCliente.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabCliente.ForeColor = System.Drawing.Color.Gray;
+            this.tabCliente.Location = new System.Drawing.Point(4, 33);
+            this.tabCliente.Name = "tabCliente";
+            this.tabCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCliente.Size = new System.Drawing.Size(771, 481);
+            this.tabCliente.TabIndex = 0;
+            this.tabCliente.Text = "      Cliente";
+            this.tabCliente.UseVisualStyleBackColor = true;
+            // 
+            // grid_Cliente
+            // 
+            this.grid_Cliente.AllowUserToAddRows = false;
+            this.grid_Cliente.AllowUserToDeleteRows = false;
+            this.grid_Cliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid_Cliente.AutoGenerateColumns = false;
+            this.grid_Cliente.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.grid_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grid_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_Cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codClienteDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.enderecoDataGridViewTextBoxColumn,
+            this.telefoneDataGridViewTextBoxColumn,
+            this.celularDataGridViewTextBoxColumn});
+            this.grid_Cliente.DataSource = this.tbClienteBindingSource;
+            this.grid_Cliente.Location = new System.Drawing.Point(3, 3);
+            this.grid_Cliente.Name = "grid_Cliente";
+            this.grid_Cliente.Size = new System.Drawing.Size(765, 471);
+            this.grid_Cliente.TabIndex = 0;
+            this.grid_Cliente.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_Cliente_RowHeaderMouseClick);
+            // 
             // codClienteDataGridViewTextBoxColumn
             // 
             this.codClienteDataGridViewTextBoxColumn.DataPropertyName = "codCliente";
@@ -888,6 +811,45 @@
             this.celularDataGridViewTextBoxColumn.HeaderText = "celular";
             this.celularDataGridViewTextBoxColumn.Name = "celularDataGridViewTextBoxColumn";
             // 
+            // tbClienteBindingSource
+            // 
+            this.tbClienteBindingSource.DataMember = "tb_Cliente";
+            this.tbClienteBindingSource.DataSource = this.bD_SistemaGerenciamentoDataSet;
+            // 
+            // tabEntrada
+            // 
+            this.tabEntrada.Controls.Add(this.grid_Produto);
+            this.tabEntrada.ForeColor = System.Drawing.Color.Gray;
+            this.tabEntrada.Location = new System.Drawing.Point(4, 33);
+            this.tabEntrada.Name = "tabEntrada";
+            this.tabEntrada.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEntrada.Size = new System.Drawing.Size(771, 481);
+            this.tabEntrada.TabIndex = 2;
+            this.tabEntrada.Text = "Produto";
+            this.tabEntrada.UseVisualStyleBackColor = true;
+            // 
+            // grid_Produto
+            // 
+            this.grid_Produto.AllowUserToAddRows = false;
+            this.grid_Produto.AllowUserToDeleteRows = false;
+            this.grid_Produto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid_Produto.AutoGenerateColumns = false;
+            this.grid_Produto.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.grid_Produto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_Produto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codProdutoDataGridViewTextBoxColumn,
+            this.produtoDataGridViewTextBoxColumn1,
+            this.marcaDataGridViewTextBoxColumn,
+            this.modeloDataGridViewTextBoxColumn});
+            this.grid_Produto.DataSource = this.tbProdutoBindingSource;
+            this.grid_Produto.Location = new System.Drawing.Point(3, 3);
+            this.grid_Produto.Name = "grid_Produto";
+            this.grid_Produto.Size = new System.Drawing.Size(765, 471);
+            this.grid_Produto.TabIndex = 0;
+            this.grid_Produto.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_Produto_RowHeaderMouseClick);
+            // 
             // codProdutoDataGridViewTextBoxColumn
             // 
             this.codProdutoDataGridViewTextBoxColumn.DataPropertyName = "codProduto";
@@ -911,6 +873,48 @@
             this.modeloDataGridViewTextBoxColumn.DataPropertyName = "modelo";
             this.modeloDataGridViewTextBoxColumn.HeaderText = "modelo";
             this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+            // 
+            // tbProdutoBindingSource
+            // 
+            this.tbProdutoBindingSource.DataMember = "tb_Produto";
+            this.tbProdutoBindingSource.DataSource = this.bD_SistemaGerenciamentoDataSet;
+            // 
+            // toolStrip_Rodape
+            // 
+            this.toolStrip_Rodape.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip_Rodape.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl_DataHoraAtual});
+            this.toolStrip_Rodape.Location = new System.Drawing.Point(0, 665);
+            this.toolStrip_Rodape.Name = "toolStrip_Rodape";
+            this.toolStrip_Rodape.Size = new System.Drawing.Size(1257, 25);
+            this.toolStrip_Rodape.TabIndex = 3;
+            this.toolStrip_Rodape.Text = "toolStrip1";
+            // 
+            // lbl_DataHoraAtual
+            // 
+            this.lbl_DataHoraAtual.Name = "lbl_DataHoraAtual";
+            this.lbl_DataHoraAtual.Size = new System.Drawing.Size(0, 22);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1257, 690);
+            this.panel1.TabIndex = 5;
+            // 
+            // tb_EntradaTableAdapter
+            // 
+            this.tb_EntradaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tb_ClienteTableAdapter
+            // 
+            this.tb_ClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // tb_ProdutoTableAdapter
+            // 
+            this.tb_ProdutoTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 

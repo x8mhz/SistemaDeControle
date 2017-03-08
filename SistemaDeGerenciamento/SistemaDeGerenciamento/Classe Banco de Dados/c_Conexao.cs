@@ -13,6 +13,8 @@ namespace SistemaDeGerenciamento
         private SqlConnection con { get; set; }
         public SqlCommand cmd { get; set; }
         public SqlDataReader dr { get; set; }
+        public SqlDataAdapter da { get; set; }
+        public BD_SistemaGerenciamentoDataSet ds { get; set; }
 
         public c_Conexao()
         {
@@ -42,6 +44,16 @@ namespace SistemaDeGerenciamento
             {
                 return -1;
             }               
+        }
+
+        public string Pesquisa()
+        {
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                return dr.GetString(1);
+            }
+            return "";
         }
 
         public string LeitorCliente()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,9 +35,9 @@ namespace SistemaDeGerenciamento
                 con.NoQuery();
                 con.FecharConexao();
             }
-            catch (Exception es)
+            catch (SqlException ex)
             {
-                MessageBox.Show("ERRO: " + es);
+                MessageBox.Show("ERRO: " + ex);
             }
         }
     }
